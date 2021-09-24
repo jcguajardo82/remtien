@@ -1,0 +1,383 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body onload="funReady()">
+    <hr class="barra" />
+    <form id="formConfirmaTarima" action="@Url.Action("ConfirmaTarima", "RegistroSecos")" method="get">
+        <div id="Principal" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    @*<tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>*@
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">13.-CONFIRMA TARIMA</span></td></tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CEDIS</span></td>
+                        <td><input type="text" id="input_NUMCEDIS" value="@TempData["input_NUMCEDIS"]" name="input_NUMCEDIS" onkeypress="input_NUMCEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label id="lbl_CEDIS">@TempData["lbl_CEDIS"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">GUIA</span></td>
+                        <td><input type="text" id="input_GUIA" name="input_GUIA" onkeypress="input_GUIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td></tr>
+                </table>
+                
+            </div>
+        </div>
+
+        <div id="Confirma" style="display:none">
+            <table>
+                <tr>
+                    <td>
+                        <span class="input-group-addon" id="sizing-addon3">ENV:</span>
+                        <label id="lbl_ENV">@TempData["lbl_ENV"]</label>
+                    </td>
+                    <td>
+                        <span class="input-group-addon" id="sizing-addon3">CONF:</span>
+                        <label id="lbl_CONF">@TempData["lbl_CONF"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="sizing-addon3">TARIMA</span></td>
+                    <td><input type="text" id="input_TARIMA" value="@TempData["input_TARIMA"]" name="input_TARIMA" onkeypress="input_TARIMA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label id="lbl_FALTANTE">@TempData["lbl_Leyenda01"]</label>&#32;<label id="lbl_FALTANTE">@TempData["lbl_Leyenda02"]</label></td>
+                    <td><label id="lbl_FALTANTE">@TempData["lbl_Leyenda03"]</label>&#32;<label id="lbl_FALTANTE">@TempData["lbl_Leyenda04"]</label></td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">ESTADO:</span></td>
+                    <td>
+                        @{
+                            <select id="cmb_ESTADO" name="cmb_ESTADO" onkeypress="cmb_ESTADOKeypress(event)">
+                                @if (TempData["cmb_ESTADO"] != null)
+                                {
+                                    foreach (System.Collections.DictionaryEntry elemento in (System.Collections.Hashtable)TempData["cmb_ESTADO"])
+                                    {
+                                        <option value="@elemento.Key">@elemento.Value</option>
+                                    }
+                                }
+                            </select>
+                        }
+                        @*<select id="cmb_ESTADO">
+                                <option value="1">OK</option>
+                                <option value="2">VIOLADA</option>
+                                <option value="4">DAÑADA</option>
+                            </select>*@
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">Opción</span></td>
+                    <td><input type="text" class="form-control" id="optionSelected2" name="optionSelected2" onkeypress="optionSelected2_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                </tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult2">@TempData["lblResult2"]</label></td></tr>
+            </table>
+           
+        </div>
+
+        <div id="Esc" style="display:none">
+            <table>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">¿DESEA FINALIZAR LA CONFIRMACION?</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">Opción</span></td>
+                    <td><input type="text" class="form-control" id="optionSelected3" name="optionSelected3" onkeypress="optionSelected3_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1-CERRAR    2-DEJAR PENDIENTE</span></td>
+                </tr>
+            </table>
+            @*<dl>
+
+                    <dt>¿DESEA FINALIZAR LA CONFIRMACION?</dt>
+                    <dt><span class="input-group-addon" id="basic-addon1">Opcion</span></dt>
+                    <dt><input type="text" class="form-control" id="optionSelected" name="optionSelected" value="1" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></dt>
+                    <dt>1-CERRAR    2-DEJAR PENDIENTE</dt>
+
+                </dl>*@
+        </div>
+        <div id="Resumen" style="display:none">
+            <table>
+                <tr><td colspan="2"><label id="messageResult3">HAY @TempData["QtaFaltante"] TARIMAS FALTANTES, CERRAR?</label></td></tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">Opción</span></td>
+                    <td><input type="text" class="form-control" id="optionSelected4" name="optionSelected4" onkeypress="optionSelected4_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1-CERRAR    2-DEJAR PENDIENTE</span></td>
+                </tr>
+                <tr><td colspan="2"><label id="messageResult4">@TempData["lblResult3"]</label></td></tr>
+            </table>
+        </div>
+        <input id="flagTarima" value="@TempData["flagTarima"]" style="visibility:hidden" />
+    </form>
+
+    <script>
+        function funReady() {
+
+            var form = document.getElementById("flagTarima").value;
+            if (form != "") {
+                var ele = document.getElementById(form);
+                if (ele.style.display == "block") {
+                    ele.style.display = "none";
+                }
+                else {
+                    ele.style.display = "block";
+                }
+            }
+
+            switch (form) {
+                case "Principal":
+                    document.getElementById("input_NUMCEDIS").focus();
+                    break;
+                case "Confirma":
+                    document.getElementById("input_TARIMA").focus();
+                    break;
+                case "Esc":
+                    document.getElementById("optionSelected3").focus();
+                    break;
+                case "Resumen":
+                    document.getElementById("optionSelected4").focus();
+                    break;
+                default:
+                    // document.getElementById("input_NUMCEDIS").focus();
+                    break;
+            }
+
+            if (document.getElementById("input_NUMCEDIS").value != "") {
+                document.getElementById("input_GUIA").focus();
+            }
+            if (document.getElementById("input_TARIMA").value != "") {
+                document.getElementById("optionSelected2").focus();
+            }
+        }
+
+        function input_NUMCEDIS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_NUMCEDIS").value != "") {
+                        document.getElementById("input_GUIA").focus();
+                        //$('form').submit();
+                        document.getElementById("formConfirmaTarima").submit();
+                    }
+                    else {
+                        document.getElementById("input_NUMCEDIS").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    var link = document.createElement('a');
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    break;
+            }
+
+
+        }
+
+        function input_GUIA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_GUIA").value != "") {
+                        document.getElementById("optionSelected").focus();
+                    }
+                    else {
+                        document.getElementById("input_GUIA").focus();
+                    }
+
+                    break;
+
+                    //esc
+                case 27:
+                    document.getElementById("input_NUMCEDIS").focus();
+                    break;
+
+            }
+        }
+        function optionSelected_onkeypress(e) {
+            //var valueOption = $("#optionSelected").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("optionSelected").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+        function input_TARIMA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_TARIMA").value != "") {
+                        document.getElementById("formConfirmaTarima").submit();
+                    }
+                    else {
+                        document.getElementById("input_TARIMA").focus();
+                    }
+                    //$('form').submit();
+                    break;
+
+                    //esc
+                case 27:
+
+                    var ele = document.getElementById("Esc");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+                        document.getElementById("optionSelected3").focus();
+
+                    }
+                    var ele = document.getElementById("Confirma");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+
+            }
+        }
+
+        function optionSelected2_onkeypress(e) {
+            //var valueOption = $("#optionSelected2").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("optionSelected2").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_TARIMA").focus();
+                    break;
+            }
+        }
+
+        function optionSelected3_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("optionSelected3").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+        function optionSelected4_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("optionSelected4").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formConfirmaTarima").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected4").focus();
+                            break;
+                    }
+
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+
+        function cmb_ESTADOKeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    document.getElementById("optionSelected2").focus();
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_TARIMA").focus();
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

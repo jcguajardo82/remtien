@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTRemateMercCyDSorianaTienda", "DTRemateMercCyDSorianaTienda\DTRemateMercCyDSorianaTienda.csproj", "{E8F1B97C-A329-4EA9-97FC-618216A0EE59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDRemateMercCyDSorianaTienda", "EDRemateMercCyDSorianaTienda\EDRemateMercCyDSorianaTienda.csproj", "{B3FFAFE4-41F5-486E-9F4A-7D175AAEECEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGRemateMercCyDSorianaTienda", "NGRemateMercCyDSorianaTienda\NGRemateMercCyDSorianaTienda.csproj", "{BC04A1EF-53DF-42A4-A629-267D6ABF1E67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemateMercCyDSorianaTiendaPC", "RemateMercCyDSorianaTiendaPC\RemateMercCyDSorianaTiendaPC.csproj", "{86053E44-487B-43F3-8F62-94848EC0BCBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soriana.FWK", "..\..\tfsSoriana\SorianaFramework\Soriana.FWK.csproj", "{048F169F-C5D6-4EE9-86A8-AD2D5262BAC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8F1B97C-A329-4EA9-97FC-618216A0EE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F1B97C-A329-4EA9-97FC-618216A0EE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F1B97C-A329-4EA9-97FC-618216A0EE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F1B97C-A329-4EA9-97FC-618216A0EE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3FFAFE4-41F5-486E-9F4A-7D175AAEECEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3FFAFE4-41F5-486E-9F4A-7D175AAEECEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3FFAFE4-41F5-486E-9F4A-7D175AAEECEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3FFAFE4-41F5-486E-9F4A-7D175AAEECEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC04A1EF-53DF-42A4-A629-267D6ABF1E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC04A1EF-53DF-42A4-A629-267D6ABF1E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC04A1EF-53DF-42A4-A629-267D6ABF1E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC04A1EF-53DF-42A4-A629-267D6ABF1E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86053E44-487B-43F3-8F62-94848EC0BCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86053E44-487B-43F3-8F62-94848EC0BCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86053E44-487B-43F3-8F62-94848EC0BCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86053E44-487B-43F3-8F62-94848EC0BCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048F169F-C5D6-4EE9-86A8-AD2D5262BAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048F169F-C5D6-4EE9-86A8-AD2D5262BAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048F169F-C5D6-4EE9-86A8-AD2D5262BAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048F169F-C5D6-4EE9-86A8-AD2D5262BAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = 
+		SccProjectUniqueName0 = ..\\..\\tfsSoriana\\SorianaFramework\\Soriana.FWK.csproj
+		SccProjectName0 = $/FWKSORIANA/SorianaFramework
+		SccAuxPath0 = http://189.211.174.140:8080/tfs/aws%20soriana
+		SccLocalPath0 = ..\\..\\tfsSoriana\\SorianaFramework
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

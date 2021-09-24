@@ -1,0 +1,212 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRArtRemProxCaducarEtapa>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover dataTables-example gvv">
+        <thead>
+            <tr>
+                @foreach (var item in Model)
+                {
+                    if (item.Titulo != null)
+                    {
+                        foreach (var tit in item.Titulo)
+                        {
+                            <th colspan="8" style="text-align:center;">@tit.Titulo</th>
+                            <th colspan="7" style="text-align:center;">@tit.TituloEtapa</th>
+                        }
+                    }
+
+                }
+
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Código Barra</th>
+                <th>Código Único de Salida</th>
+                <th>Descipción</th>
+                <th>Lote</th> 
+                <th>Fecha Captura</th>                
+                <th>Fecha de caducidad del artículo</th>
+                <th>Días antes de caducar al capturar</th> 
+                <th>Fecha del Día</th>
+                <th>Días antes de caducar actual</th>
+                <th>Etapa Actual</th>
+                <th>% Dcto</th>
+                <th>Precio Origen</th>
+                <th>Dcto</th>
+                <th>Precio Remate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                if (item.Detalle != null)
+                {
+                    foreach (var det in item.Detalle)
+                    {
+                        <tr>
+                            <td>@det.Cnsc</td>
+                            <td>@det.CodigoBarra</td>
+                            <td>@det.CodigoRemate</td>
+                            <td>@det.Descripcion</td>
+                            <td>@det.Lote</td>
+                            <td>@det.FechaCaptura</td>
+                            <td>@det.FechaCaducidad</td>                            
+                            <td>@det.DiasAntesCap</td>
+                            <td>@det.FechaDia</td>
+                            <td>@det.DiasAntesActCap</td>
+                            <td>@det.EtapaActual</td>
+                            <td>@String.Format("{0:P2}", Math.Round(det.PorcDcto, 2))</td>
+                            <td>@String.Format("{0:C}", Math.Round(det.PrecioOrigen, 2))</td>
+                            <td>@String.Format("{0:C}", Math.Round(det.Dcto, 2))</td>
+                            <td>@String.Format("{0:C}", Math.Round(det.PrecioRem, 2))</td>
+                        </tr>
+                    }
+                }
+
+            }
+        </tbody>
+    </table>
+@*
+        <table class="table table-striped table-hover" >
+            <caption style="border: inherit; background-color: lightgrey;">
+                <span class="align-left"><strong>Datos del Artículo Próximo a Caducar Programado para Remate</strong></span>
+            </caption>
+            <thead>
+                <tr>
+                    <th >No</th>
+                    <th >Código Barra</th>
+                    <th >Código Único Salida</th>
+                    <th >Descripción</th>
+                    <th>Lote</th>
+                    <th>Fecha Captura</th>
+                    <th>Fecha Caducidad Articulo</th>
+                    <th>Dias Antes Caducar al Capturar</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+           {
+                    <tr>
+                        <td>@item.Numero</td>
+                        <td>@item.CodigoBarra</td>
+                        <td>@item.CodigoUnicoSalida</td>
+                        <td ><div class="concat">@item.Descripcion</div></td>
+                        <td>@item.Lote</td>
+                        <td>@item.FechaCaptura</td>
+                        <td>@item.FechaCaducidad</td>
+                        <td>@item.DiasAntesCaducar</td>
+
+
+            </tr>
+           }
+            </tbody>
+        </table>
+        <table class="table table-striped table-hover" >
+            <caption style="border: inherit; background-color: lightgrey;">
+                <span class="align-left"><strong>Datos de la Tabla de Soluciones</strong></span>
+            </caption>
+            <thead>
+                <tr>
+
+                    <th>Etapa</th>
+                    <th>Rango Inicial</th>
+                    <th>Rango Final</th>
+                    <th>% Maximo Oferta Obtuvo Hasta Su Caducidad</th>
+                    <th>% De Afectacion que Se Aplicará al Merma</th>
+
+                </tr>
+            </thead>
+            <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+                <td>@item.Etapa</td>
+                        <td>@item.RangoIni</td>
+                        <td>@item.RangoFin</td>
+                        <td>@item.MaxOferta</td>
+                        <td>@item.PorAfectacion</td>
+                        <td>@item.AfecMerma</td>
+                         </tr>
+    }
+            </tbody>
+        </table>
+        <table class="table table-striped table-hover">
+            <caption style="border: inherit; background-color: lightgrey;">
+                <span class="align-left"><strong>Aplicación de Descuentos según Etapa</strong></span>
+            </caption>
+            <thead>
+                <tr>
+
+                        <th>Fecha del dia</th>
+                        <th>Antes Caducar Actual</th>
+                        <th>Etapa Actual</th>
+                        <th>% Dcto</th>
+                        <th>Precio Origen</th>
+                        <th>$ Dcto</th>
+                        <th>Precio Ramate</th>
+                        <th>Folio Acta Destrucción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                                    <td>@item.FechaDia</td>
+                                    <td>@item.DiasAntesActual</td>
+                            <td>@item.EtapaActual</td>
+                            <td>@item.PorDescuento</td>
+                            <td>@item.PrecioOrigen</td>
+                            <td>@item.Descuento</td>
+                            <td>@item.PrecioRemate</td>
+                            <td>@item.FolioActaDestruccion</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>*@
+</div>
+@*@{
+    var grid = new WebGrid(Model, canPage: false, canSort: false);
+}
+
+@grid.GetHtml(
+                        tableStyle: "table table-striped ",
+                        headerStyle:"head",
+                        columns:
+
+                            grid.Columns(
+
+
+
+                                        grid.Column("Numero", "No", style: "col_No"),
+                                        grid.Column("CodigoBarra", "Código Barra", style: "col_CodBarra"),
+                                        grid.Column("CodigoUnicoSalida", "Código Único Salida"),
+                                        grid.Column("Descripcion", "Descripción"),
+                                        grid.Column("Lote", "Lote"),
+                                        grid.Column("FechaCaptura", "Fecha Captura"),
+                                        grid.Column("FechaCaducidad", "Fecha Caducidad Articulo"),
+                                        grid.Column("DiasAntesCaducar", "Dias Antes Caducar al Capturar"),
+                                        grid.Column("Etapa", "Etapa"),
+                                        grid.Column("RangoIni", "Rango Inicial"),
+                                        grid.Column("RangoFin", "Rango Final"),
+                                        grid.Column("MaxOferta", "% Maximo Oferta Obtuvo Hasta Su Caducidad"),
+                                        grid.Column("PorAfentacion", "% De Afectacion que Se Aplicará al Merma"),
+                                        grid.Column("AfentacionMargen", "Afectacion Merma Que Obtuvo Hasta Su Caducidad"),
+                                        grid.Column("FechaDia", "Fecha del dia"),
+                                        grid.Column("DiasAntesActual", " Antes Caducar Actual"),
+                                        grid.Column("EtapaActual", "Etapa Actual"),
+                                        grid.Column("PorDescuento", "% Dcto"),
+                                        grid.Column("PrecioOrigen", "Precio Origen"),
+                                        grid.Column("Descuento", "$ Dcto"),
+                                        grid.Column("PrecioRemate", "Precio Ramate"),
+                                        grid.Column("FolioActaDestruccion", "Folio Acta Destrucción")
+                                        )
+
+                    )*@
+
+<style type="text/css">
+    .concat div { overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; width: inherit; }
+
+</style>

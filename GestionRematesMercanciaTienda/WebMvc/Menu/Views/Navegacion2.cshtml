@@ -1,0 +1,130 @@
+﻿<html>
+<head>
+    @*<script src="https://code.jquery.com/jquery-1.10.2.js"></script>*@
+</head>
+<body>
+
+    <form id="formTest" action="@Url.Action("Navegacion2", "Menu")" method="get">
+
+
+        Cedis:<br>
+        <input type="text" id="incedis" name="incedis" onkeypress="incedis_funcion(event)"><br>
+        Guia:<br>
+        <input type="text" id="inguia" name="inguia" onclick="inguia_funcion(event)">
+
+
+
+    </form>
+    <button id="cmd" onclick="myFunction()">LLamado desde controller</button>
+    <br />
+    <button id="cmd2" onclick="myFunction2()">Llamado por ajax</button>
+
+    <script>
+
+        function myFunction() {
+
+            var url = '@Url.Action("PruebaWS", "Menu")';
+            window.location.href = url;
+
+
+            @*$.ajax({
+                type: 'GET',
+                cache: false,
+                //datatype: 'html',
+                url: '@Url.Action("PruebaWS", "Menu")',
+                data: {
+
+                },
+
+                success: function (data) {
+                    alert(data.Status);
+                }
+                               ,
+                error: function (jqXHR, textStatus, errorThrown) {
+                    showModal(errorThrown, "ERROR EN EL SISTEMA");
+                }
+
+            });*@
+
+
+        }
+
+
+        function myFunction2() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:7715/PruebaRecibo", true);
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log(xhr.responseText);
+                        var response = JSON.parse(xhr.responseText);
+                        alert(response);
+                    } else {
+                        alert(xhr.statusText);
+                    }
+                }
+            };
+            xhr.onerror = function (e) {
+                alert(xhr.statusText);
+            };
+            xhr.send(null);
+        }
+
+        //submit data with jQuery AJAX
+        function submit() {
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                //datatype: 'html',
+                url: '@Url.Action("ValidaCedis", "AuditoriaGuia")',
+                data: {
+                    "cedis": "5554"
+                },
+
+                success: function (data) {
+                    alert(data.status);
+                }
+                               ,
+                error: function (jqXHR, textStatus, errorThrown) {
+                    showModal(errorThrown, "ERROR EN EL SISTEMA");
+                }
+
+            });
+        }
+
+
+        function incedis_funcion(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+                case 27:
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    window.location.href = url;
+                    break;
+                case 13:
+                    document.getElementById("inguia").focus();
+                    break;
+            }
+        }
+
+        function inguia_funcion(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+                case 27:
+                    alert("esc");
+                    break;
+                case 13:
+                    //alert("ok");
+                    document.getElementById("Navegacion2").submit();
+
+
+                    break;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

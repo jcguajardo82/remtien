@@ -1,0 +1,148 @@
+﻿
+@{
+    Layout = "~/Shared/Views/_LayoutLightMenu.cshtml";
+}
+
+<!DOCTYPE html>
+<style type="text/css">
+    /* The ruleset below (empty or otherwise) is required for the bug! */
+    /*.holder b {
+    }
+
+    .holder ~ span b {
+        background: red;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one a {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one input {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one span {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one dt {
+        font-size: 12px;
+        font-family: Consolas;
+    }*/
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio_2_1</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    <div class="parent-style-one">
+        @*<div class="row">
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Opcion</span>
+                    <input type="text" class="form-control" id="optionSelected" name="optionSelected" value="1" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeydown(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>*@
+
+
+        <dl>
+            <dt><i><span><span><b>@Html.ActionLink("211.-Indica Accion Principal", "IndicaAccionPrincipal", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("212.-Indica Tipo de Entrega", "IndicaTipodeEntrega", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("213.-Indica Factura", "IndicaFactura", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("214.-Captura Datos de Factura", "CapturaDatosdeFactura", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("215.-Confirma Datos de Factura", "ConfirmaDatosdeFactura", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("216.-Resumen De Mercancia", "ResumenDeMercancia", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("217.-Autorizacion De Folio", "AutorizacionDeFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("218.-Autoriza Detalle Ped Ven", "AutorizaDetallePedVen", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("219.-Indica Codigo Para Recibo", "IndicaCodigoParaRecibo", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2110.-Indica Codigo GS1", "IndicaCodigoGS1", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2111.-Captura Lote Y Peso De GS1", "CapturaLoteYPesoDeGS1", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2112.-Cofirma Lote Y Peso De GS1", "CofirmaLoteYPesoDeGS1", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2113.-Indica Modo Recibo De Cod", "IndicaModoReciboDeCod", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2114.-Captura Modo Normal", "CapturaModoNormal", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2115.-Captura Modo Bascula", "CapturaModoBascula", "RecibirFolioNE")</b></span></span></i></dt>
+
+            <dt><i><span><span><b>@Html.ActionLink("2116.-Autoriza Cap Empaque", "AutorizaCapEmpaque", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2117.-Error De Aut Cap Emp", "ErrorDeAutCapEmp", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2118.-Cierre De Folio", "CierreDeFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2119.-Mercancia Mal Estado", "MercanciaMalEstado", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2120.-Cantidad Mal Estado", "CantidadMalEstado", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2121.-Confirma Factura Electronica", "ConfirmaFacturaElectronica", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2122.-Indica Detalle Factura", "IndicaDetalleFactura", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2123.-Cierre De Folio Final", "CierreDeFolioFinal", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2124.-Estatus De Folio", "EstatusDeFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2125.-Transportista Folio", "TransportistaFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2126.-Detalle Bulto", "DetalleBulto", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2127.-Retoma Folio", "RetomaFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2128.-Confirma RetomarFolio", "ConfirmaRetomarFolio", "RecibirFolioNE")</b></span></span></i></dt>
+            <dt><i><span><span><b>@Html.ActionLink("2129.-Valida Factura", "ValidaFactura", "RecibirFolioNE")</b></span></span></i></dt>
+
+        </dl>
+
+
+
+    </div>
+     @*@Scripts.Render("~/bundles/jquery")*@
+</body>
+</html>
+
+<script>
+
+    function optionSelected_onkeydown(e) {
+        //var valueOption = $("#optionSelected").val;
+        var valueOption = document.getElementById("optionSelected").value;
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+
+
+        switch (keyCode) {
+
+            //atras
+            case 37:
+                break;
+                //adelante
+            case 39:
+                switch (valueOption) {
+                    case "1":
+                        var url = '@Url.Action("Inicio", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "17":
+                        var url = '@Url.Action("Inicio_1_7", "Menu")';
+                        window.location.href = url;
+                        break;
+                }
+                break;
+                //enter
+            case 13:
+                switch (valueOption) {
+                    case "1":
+                        var url = '@Url.Action("Inicio", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "17":
+                        var url = '@Url.Action("Inicio_1_7", "Menu")';
+                        window.location.href = url;
+                        break;
+                }
+                break;
+                //esc
+            case 27:
+                break;
+        }
+    }
+
+</script>

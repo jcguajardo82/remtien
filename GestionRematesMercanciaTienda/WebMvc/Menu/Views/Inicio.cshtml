@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = "~/Shared/Views/_LayoutLightMenu.cshtml";
+}
+
+<!DOCTYPE html>
+
+@*<style type="text/css">
+    
+    .holder b {
+    }
+
+    .holder ~ span b {
+        background: red;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one a {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one input {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one span {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one dt {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+</style>*@
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/ContentLight/css")
+        
+</head>
+<body>
+
+    <hr style="height: 10px;color: red;border-color:red" />
+    <div class="parent-style-one">
+        @*<div class="row">
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Opcion</span>
+                    <input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeypress(event)" value="1" placeholder="Selecciona una opcion" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>*@
+
+        <dl>
+            <dt>Menu Aplicativo Remate Mecrancia Caduca y Dañada</dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("1.-REGISTRO DE SECOS", "Inicio_1_1", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("2.-REGISTRO DE MCIA.", "Inicio_2", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("3.-SALIDA DE MCIA.", "Inicio_3", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("4.-SUBPRODUCTOS.", "Inicio_4", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+
+                    <span>
+                        <span><b>@Html.ActionLink("6.-Navegacion2.", "Navegacion2", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+             <!--<dt>
+                <i>
+                    HTML COMMENT OR ANY ELEMENT 
+                    <span>
+                        <span><b>@Html.ActionLink("5.-Navegacion.", "Navegacion", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    
+                    <span>
+                        <span><b>@Html.ActionLink("6.-Navegacion2.", "Navegacion2", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+             <dt>
+                <i>
+                    
+                    <span>
+                        <span><b>@Html.ActionLink("5.-Operadores.", "Operadores", "Operadores")</b></span>
+                    </span>
+                </i>
+            </dt>-->
+        </dl>
+    </div>
+
+
+
+
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+</body>
+</html>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        //function getCookie(cookieName) {
+        //    var cookieArray = document.cookie.split(';');
+        //    for (var i = 0; i < cookieArray.length; i++) {
+        //        var cookie = cookieArray[i];
+        //        while (cookie.charAt(0) == ' ') {
+        //            cookie = cookie.substring(1);
+        //        }
+        //        cookieHalves = cookie.split('=');
+        //        if (cookieHalves[0] == cookieName) {
+        //            return cookieHalves[1];
+        //        }
+        //    }
+        //    return "";
+        //}
+
+
+        //alert(getCookie("CookieLogin"));
+    });
+
+    
+</script>

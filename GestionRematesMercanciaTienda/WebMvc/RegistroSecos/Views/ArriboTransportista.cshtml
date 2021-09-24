@@ -1,0 +1,200 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body onload="funReady()">
+    <hr class="barra"  />
+    <form id="formArriboTransportista" action="@Url.Action("ArriboTransportista", "RegistroSecos")" method="get">
+        <div id="Principal" style="display:block">
+            <div class="parent-style-one">
+                <table>
+                    @*<tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>*@
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">11.-ARRIBO TPTA</span></td></tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CODIGO DOCUMENTO:</span></td>
+                        <td><input type="text" id="input_CODDOC" value="@TempData["input_CODDOC"]" name="input_CODDOC" onkeypress="input_CODDOC_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CEDIS:</span></td>
+                        <td>
+                            <input type="text" id="input_NUMCEDIS" name="input_NUMCEDIS" value="@TempData["input_NUMCEDIS"]" onkeypress="input_NUMCEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label id="lbl_CEDIS">@TempData["lbl_CEDIS"]</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">EMBARQUE:</span></td>
+                        <td>
+                            <input type="text" id="lbl_NUMEMBARQUE" name="lbl_NUMEMBARQUE" value="@TempData["lbl_NUMEMBARQUE"]" onkeypress="lbl_NUMEMBARQUE_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3">
+                            @*<label id="lbl_NUMEMBARQUE">@TempData["lbl_NUMEMBARQUE"]</label>*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">@TempData["Leyenda01"]</span></td>
+                        <td><label id="lbl_FECLLEGADA">@TempData["lbl_FECLLEGADA"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">@TempData["Leyenda03"]</span></td>
+                        <td><label id="lbl_STATUS">@TempData["lbl_STATUS"]</label></td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="option" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td></tr>
+                </table>
+            </div>
+        </div>
+        <input id="flagOpcion" value="@TempData["flagOpcion"]" style="visibility:hidden" />
+    </form>
+
+
+    <script>
+        //$(document).ready(function () {
+
+        //    if (document.getElementById("flagOpcion").value == "Y") {
+        //        $("#input_CODDOC").val() = "";
+        //        $("#input_NUMCEDIS").val() = "";
+        //        $("#lbl_CEDIS").val() = "";
+        //    }
+        //    else {
+
+        //    }
+
+        //});
+
+        function funReady() {
+
+                    document.getElementById("input_CODDOC").focus();
+
+
+            if (document.getElementById("input_NUMCEDIS").value != "") {
+                document.getElementById("lbl_NUMEMBARQUE").focus();
+            }
+
+            if (document.getElementById("lbl_NUMEMBARQUE").value != "") {
+                document.getElementById("optionSelected").focus();
+            }
+        }
+
+        function input_CODDOC_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+
+                //enter
+                case 13:
+                    if (document.getElementById("input_CODDOC").value != ""){
+                        document.getElementById("formArriboTransportista").submit();
+                    }
+                    else {
+                        document.getElementById("input_NUMCEDIS").focus();
+                    }
+                    //var valueDoc = $("#input_CODDOC").val();
+
+                    //if (valueDoc == "") {
+                    //    document.getElementById("input_NUMCEDIS").focus();
+                    //}
+                    //else {
+
+                    //    //$('form').submit();
+                    //    document.getElementById("optionSelected").focus();
+                    //}
+                    break;
+                    //esc
+                case 27:
+                     var link = document.createElement('a');
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    break;
+            }
+        }
+
+        function optionSelected_onkeypress(e) {
+            //var valueOption = $("#optionSelected").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //$('form').submit();
+                    var op = document.getElementById("optionSelected").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formArriboTransportista").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formArriboTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+        function input_NUMCEDIS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+
+                //enter
+                case 13:
+                    debugger;
+                    if (document.getElementById("input_NUMCEDIS").value !=  "") {
+                        document.getElementById("formArriboTransportista").submit();
+                    }
+                    else {
+                        document.getElementById("input_NUMCEDIS").focus();
+                    }
+                    //document.getElementById("input_GUIA").focus();
+                   // $('form').submit();
+                    //alert(window.location);
+                    //alert(window.location.host);
+                    //document.getElementById("lbl_NUMEMBARQUE").focus();
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_CODDOC").focus();
+                    break;
+            }
+        }
+
+        function lbl_NUMEMBARQUE_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+
+                //enter
+                case 13:
+                    //document.getElementById("input_GUIA").focus();
+                    //$('form').submit();
+                    if (document.getElementById("lbl_NUMEMBARQUE").value != "") {
+                        document.getElementById("optionSelected").focus();
+                    document.getElementById("formArriboTransportista").submit();
+
+                    }
+                    else {
+                        document.getElementById("lbl_NUMEMBARQUE").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_NUMCEDIS").focus();
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

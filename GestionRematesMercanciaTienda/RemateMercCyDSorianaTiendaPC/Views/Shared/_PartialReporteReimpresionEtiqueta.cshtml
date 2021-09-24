@@ -1,0 +1,42 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRReimpresionEtiqueta>
+@{
+    var grid = new WebGrid(Model, canPage: false, canSort: false);
+}
+
+@grid.GetHtml(
+                tableStyle: "table table-striped table-bordered table-hover dataTables-example gvv",
+                columns:
+
+                    grid.Columns(
+                                grid.Column("Articulo", "Código"),
+                                grid.Column("CodInterno", "Código Único Salida", style: "Curency"),
+                                grid.Column("Descripcion", "Descripción", style: "Desc"),
+                                grid.Column("Lote", "Lote"),
+                                grid.Column("FechaCaducidad", "Fec Caducidad", style: "Curency"),
+                                grid.Column("CantPiezas", "Cant Capturada", style: "Curency"),
+                                grid.Column(header: "Confirmar", format: @<text><input name="checkbox" type="checkbox" /></text>),                                
+                                grid.Column("Cant Imprimir", format: @<text >@Html.Label("")</text>, style: "Curency")
+                                )
+               )
+
+
+<style>
+.Curency
+{
+text-align: center;
+width: 140px;
+border: rgba(250, 38, 38, 0);
+border-right-style: solid;
+border-right-width: 10px;
+
+}
+.Desc
+{
+text-align: center;
+width: 340px;
+border: rgba(250, 38, 38, 0);
+border-right-style: solid;
+border-right-width: 10px;
+
+}
+</style>

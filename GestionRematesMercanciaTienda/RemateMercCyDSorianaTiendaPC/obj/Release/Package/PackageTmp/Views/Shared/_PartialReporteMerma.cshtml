@@ -1,0 +1,21 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRMerma>
+@{
+    var grid = new WebGrid(Model, canPage: false, canSort: false);
+}
+
+@grid.GetHtml(
+                tableStyle: "table table-striped table-bordered table-hover dataTables-example gvv",
+                columns:
+
+                    grid.Columns(
+                                grid.Column("SKU", "Código"),
+                                grid.Column("CodInterno", "Código Único Salida"),
+                                grid.Column("Descripcion", "Descripción"),
+                                grid.Column("Lote", "Lote"),
+                                grid.Column("FechaCaducidad", "Fecha Caducidad"),
+                                grid.Column("DiasVencidos", "Días Vencidos"),
+                                grid.Column("Existencia", "Existencia")
+                                @*, grid.Column(header: "CheckBox", format: @<text><input name="checkbox" type="checkbox" /></text>)*@
+
+                                )
+               )

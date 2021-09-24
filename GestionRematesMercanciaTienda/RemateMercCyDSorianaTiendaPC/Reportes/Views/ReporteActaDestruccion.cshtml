@@ -1,0 +1,161 @@
+﻿@{
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+@{
+    var Fecha = String.Format("{0:d/M/yyyy}", DateTime.Now);
+    if (ViewData["ddlSrcFolio"] == null)
+    {
+        List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem>
+        cat = new List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem>();
+        EDReciboTiendaSoriana.Captura.EDRConsultaListItem item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item.Descripcion = "Seleccione";
+        item.Id = -1;
+        cat.Add(item);
+        var dropdownVD = new SelectList(cat, "Id", "Descripcion");
+        ViewData["ddlSrcFolio"] = dropdownVD;
+    }
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a>RT24 Acta Destrucción
+                    </h2>
+                    <div class="panel-body">
+                        <div class="input-group-btn ">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Fecha: </label>
+                                    <div class="input-group date" id="FechaActaDesctruccionDate">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        @Html.TextBox("FechaActaDesctruccion", null, new { @class = "form-control datepicker", @placeholder = "Fecha" })
+                                    </div>
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Fecha</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Folio de Captura:</label>
+                                    @Html.DropDownList("FolActaDesctruccion", (SelectList)ViewData["ddlSrcFolio"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Folio</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-warning btn-actdestruccion" type="button"><i class="fa fa-binoculars"></i>Buscar </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-1">
+                            </div>
+                            <div class="col-lg-1">
+                            </div>
+                        </div>
+                        <div class="row" id="Reporte" hidden="hidden">
+                            <div class="col-lg-9">
+                            </div>
+                            <div class="col-lg-1">
+                            </div>
+                            <div class="col-lg-1">
+                                <button class="btn navy-bg " id="btnReporte" type="button" onclick="javascript: ObtenerReporte()">Reporte </button>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div id="divResults">
+                                @{Html.RenderPartial("~/Views/Shared/_PartialReporteActaDestruccion.cshtml");}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalGrid" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                        <div class="modal-body" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalTitle"> Consulta Reporte Acta Destrucción </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="panel panel-default" id="datosReporte" hidden="hidden" style="padding-left: 20px;padding-right: 20px;">
+                                        <div>
+                                            <iframe width="100%" id="frameReporte" src="" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @section Styles {
+
+            @Styles.Render("~/plugins/dataPickerStyles")
+        }
+        @section Scripts {
+            @Scripts.Render("~/plugins/flot")
+            @Scripts.Render("~/plugins/chartJs")
+            @Scripts.Render("~/plugins/peity")
+            @Scripts.Render("~/plugins/dataTables")
+            @Scripts.Render("~/plugins/dataPicker")
+            @Scripts.Render("~/plugins/slimScroll")
+            @Scripts.Render("~/Scripts/RepActaDestruccion")
+
+            <script>
+                function ObtenerReporte() {
+                    debugger;
+                    var folio = $("#FolActaDesctruccion").val();
+                    var Usuario ='@Session["sNombre"].ToString()';
+
+                    $.ajax({
+                        url: '@Url.Action("ImprimeReporte", "Reportes")',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: {
+                            "folio": folio,
+                            "Usuario": Usuario
+                        },
+                        success: function (data) {
+                            if (data.Success == true) {
+                                $("#datosGridDetalle").show();
+                                $("#datosReporte").show();
+                                $("#modalGrid").modal();
+                                debugger;
+
+                                var url = data.Message;
+                                var url2 = '@Url.Content("~/").ToString()' + url;
+                                //   bootbox.alert(url2);
+                                var heigth = $(document).height() * 1.1;
+
+                                $('#frameReporte').prop('src', url2)
+                                $('#frameReporte').prop('height', heigth)
+                            }
+                            else {
+                                bootbox.alert(data.Message);
+                            }
+                        }
+                    });
+                }
+            </script>
+        }
+
+
+    </div>
+</div>
+
+
+

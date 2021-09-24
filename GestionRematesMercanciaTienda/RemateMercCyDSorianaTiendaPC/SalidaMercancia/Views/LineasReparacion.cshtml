@@ -1,0 +1,386 @@
+﻿@{
+    ViewBag.Title = "LineasReparacion";
+}
+@{
+    ViewBag.Title = "Alta de Registro";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <br />
+                        <h2 style="margin-top: 5px;">
+                            <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Lineas Reparacion
+                        </h2>
+                        <div class="panel panel-default" style="padding-left: 10px;padding-right:10px;">
+                            <div class="row" style="padding-top:10px">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <label style="padding-left: 25px;padding-right: 25px;">Formato Tienda: </label>
+                                    <div class="dropdown" style="padding-left: 25px;padding-right: 25px;">
+                                        @Html.DropDownList("Id_Cve_Fmto", (SelectList)ViewData["ddlFtoTienda"], "-- Tipo Exhibicion --"
+                                            , new { id = "ddlFtoTienda", @class = "form-control", onchange = "cargaComboFtoTienda()" })
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 col-md-9 col-lg-9">
+
+                                </div>
+                            </div>
+                            <div class="row" id="gridFolios">
+                                <div class="col-sm-8 col-md-8 col-lg-8" style="padding-top:20px">
+                                    <div id="table-scroll">
+                                        <table id="tblLineas" class="table table-striped table-bordered table-hover dataTables-example gvv" style="overflow: scroll">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center small">Linea</th>
+                                                    <th class="text-center small">Abreviatura</th>
+                                                    <th class="text-center small">Línea <br /> Reparable</th>
+                                                    <th class="text-center small">Todos los <br /> Proveedores</th>
+                                                    <th class="text-center"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title"> Captura de Proveedores para reparacion</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row" style="padding-left:20px;">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td style="text-align:right;width:10%"><strong>Proveedor:</strong></td>
+                                                    <td style="text-align:left;width:30%;padding-left:5px;">
+                                                        @*<input type="text" id="txtCodProv" class="form-control-size"
+                                                            placeholder="Código Proveedor"
+                                                            onkeyup="javascript: return isNumber(event);" />*@
+                                                        @Html.TextBox("txtCodProv", null, new
+                                                   {
+                                                       @class = "form-control-size",
+                                                       @onkeypress = "return isNumber(event)",
+                                                       @onkeyup = "return isNumber(event)",
+                                                       @onkeydown = "onkeydown_Proveedor(event)"
+                                                   })
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="...">
+
+                                                            <button type="button" class="btn btn-default" onclick="GuardarProveedores();" title="Guardar">
+                                                                <i class="fa fa-save" aria-hidden="true"></i>
+                                                            </button>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
+                                        <div class="row" id="gridFolios" style="padding-top:10px;">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div id="table-scroll">
+                                                    <input type="hidden" id="hddIdLinea" />
+                                                    <table id="tblProveedores" class="table table-striped table-bordered table-hover dataTables-example gvv" style="overflow: scroll" style="overflow: scroll">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center small">Código</th>
+                                                                <th class="text-center small">Proveedor</th>
+                                                                <th class="text-center small">Activado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/flot")
+    @Scripts.Render("~/plugins/chartJs")
+    @Scripts.Render("~/plugins/peity")
+    @Scripts.Render("~/plugins/dataTables")
+    @Styles.Render("~/plugins/clockpickerStyles")
+    @Styles.Render("~/plugins/datapickerStyles")
+    @Scripts.Render("~/plugins/dataPicker")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+        });
+
+    </script>
+    @*cargaComboFtoTienda*@
+    <script>
+        function cargaComboFtoTienda() {
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+            if (cId_Cve_Fmto.length != 0) {
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    datatype: 'html',
+                    async: false,
+                    url: '@Url.Action("ConsultaLineaPartRepara", "SalidaMercancia")',
+                    data: {
+                        cId_Cve_Fmto: cId_Cve_Fmto
+                    },
+                    success: function (data) {
+                        $("#tblLineas tbody").empty()
+                        if (data.length != 0) {
+                            $.each(data, function (index, row) {
+                                AddRowLineas(row.Id_Num_Linea);
+                                debugger;
+                                $('#Desc_Linea' + nextRowID).val(row.Desc_Linea);
+                                $('#Abrev_Linea' + nextRowID).val(row.Abrev_Linea);
+                                $('#Bit_PermRemate' + nextRowID).prop('checked', row.Bit_PermRemate);
+                                $('#Bit_AplicaTodos' + nextRowID).prop('checked', row.Bit_AplicaTodos);
+                            })
+
+                        }
+                        else {
+                            $("#tblLineas tbody").empty();
+                            bootbox.alert("No hay datos disponibles en la tabla");
+                        }
+                    }
+                    , error: function (jqXHR, textStatus, errorThrown) {
+                        bootbox.alert(errorThrown);
+                    }
+
+                });
+            }
+        }
+
+    </script>
+    @*Add Rows*@
+    <script>
+        var nextRowID = 0;
+        function AddRowLineas(idLinea) {
+            nextRowID = nextRowID + 1;
+
+            $('#tblLineas').append('<tr id=\'rowLinea' + nextRowID + '\'>' +
+            '<td><input disabled type=\'text\' name=\'Desc_Linea' + nextRowID
+            + '\' id=\'Desc_Linea' + nextRowID + '\'  class=\'form-control-size \' style=\';font-size: 11px;width:100%;\' /></td>' +
+            '<td><input disabled type=\'text\' name=\'Abrev_Linea' + nextRowID + '\' id=\'Abrev_Linea' + nextRowID + '\'  class=\'form-control-size \' style=\'font-size: 11px;width:100%;\' /></td>' +
+            '<td align="center" valign="middle"><input disabled type=\'checkbox\' name=\'Bit_PermRemate\' id=\'Bit_PermRemate' + nextRowID + '\'  class=\'all pull-center \' /></td>' +
+            '<td align="center" valign="middle"><input disabled type=\'checkbox\' name=\'Bit_AplicaTodos\' id=\'Bit_AplicaTodos' + nextRowID + '\'  class=\'all pull-center \' /></td>' +
+            '<td align="center" valign="middle"><input  value=\'Detalle\'  type=\'button\' name=\'btnDetalleLinea\' id=\'btnDetalleLinea' + nextRowID
+            + '\' style=\'width:80%\'  class="btn btn-success btn-xs" onclick=\' javascript:detalleLineaProv(' + idLinea + ');\'/></td>' +
+            '</tr>');
+        }
+        function AddRowProveedor() {
+            nextRowID = nextRowID + 1;
+
+            $('#tblProveedores').append('<tr id=\'rowProveedor' + nextRowID + '\'>' +
+            '<td style="width:15%"><input disabled type=\'text\' name=\'Id_Num_Prov' + nextRowID
+            + '\' id=\'Id_Num_Prov' + nextRowID + '\'  class=\'form-control-size \' style=\'padding-right:10px;font-size: 11px;width:100%;text-align:right;\' /></td>' +
+            '<td style="text-align:left;width:70%"><input disabled type=\'text\' name=\'Nom_Comercial' + nextRowID + '\' id=\'Nom_Comercial' + nextRowID + '\'  class=\'form-control-size \' style=\'font-size: 11px;;width:100%;\' /></td>' +
+            '<td align="center" valign="middle"><input  type=\'checkbox\' name=\'Bit_Activo\' id=\'Bit_Activo' + nextRowID + '\'  class=\'all pull-center \' /></td>' +
+            '</tr>');
+        }
+    </script>
+    @*detalleLineaProv*@
+    <script>
+        function detalleLineaProv(idLinea) {
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+
+            if (cId_Cve_Fmto.length != 0 && idLinea.length != 0) {
+                $("#hddIdLinea").val(idLinea);
+                ConsultaProvRepara(idLinea, cId_Cve_Fmto)
+                $("#modalMensaje").modal("show");
+                $("#txtCodProv").focus();
+
+            }
+        }
+    </script>
+    @*ObtieneProveedor*@
+    <script>
+        function onkeydown_Proveedor(event) {
+
+            switch (event.which) {
+                case 9:
+                case 13:
+                case 19:
+                    ObtieneProveedor();
+                    break;
+            }
+        }
+        function ObtieneProveedor()
+        {
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+            var iId_Num_Linea = $("#hddIdLinea").val();
+            var Id_Num_Prov = $("#txtCodProv").val();
+            if (Id_Num_Prov.length != 0 && cId_Cve_Fmto.length != 0 && iId_Num_Linea.length != 0)
+            {
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    datatype: 'html',
+                    async: false,
+                    url: '@Url.Action("ObtieneProveedor", "SalidaMercancia")',
+                    data: {
+                        Id_Num_Prov:Id_Num_Prov,
+                        iId_Num_Linea: iId_Num_Linea
+                        , cId_Cve_Fmto: cId_Cve_Fmto
+                    },
+                    success: function (data) {
+                        if (data.length != 0) {
+                            $.each(data, function (index, row) {
+                                AddRowProveedor();
+                                debugger;
+                                $('#Id_Num_Prov' + nextRowID).val(row.Id_Num_Prov);
+                                $('#Nom_Comercial' + nextRowID).val(row.Nom_Comercial);
+                                $('#Bit_Activo' + nextRowID).prop('checked', true);
+
+                            })
+                            $("#txtCodProv").val("");
+                            $("#txtCodProv").focus();
+                        }
+                        else {
+                            //$("#tblProveedores tbody").empty();
+                            // bootbox.alert("No hay datos disponibles en la tabla");
+                        }
+                    }
+                      , error: function (jqXHR, textStatus, errorThrown) {
+                          bootbox.alert(errorThrown);
+                      }
+
+                });
+            }
+        }
+    </script>
+    @*COnsulta Prov Repara*@
+    <script>
+        function ConsultaProvRepara(iId_Num_Linea, cId_Cve_Fmto) {
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                datatype: 'html',
+                async: false,
+                url: '@Url.Action("ConsultaProvRepara", "SalidaMercancia")',
+                data: {
+                    iId_Num_Linea: iId_Num_Linea
+                    , cId_Cve_Fmto: cId_Cve_Fmto
+                },
+                success: function (data) {
+                    $("#tblProveedores tbody").empty()
+                    if (data.length != 0) {
+                        $.each(data, function (index, row) {
+                            AddRowProveedor();
+                            debugger;
+                            $('#Id_Num_Prov' + nextRowID).val(row.Id_Num_Prov);
+                            $('#Nom_Comercial' + nextRowID).val(row.Nom_Comercial);
+                            $('#Bit_Activo' + nextRowID).prop('checked', row.Bit_Activo);
+                        })
+
+                    }
+                    else {
+                        $("#tblProveedores tbody").empty();
+                       // bootbox.alert("No hay datos disponibles en la tabla");
+                    }
+                }
+                       , error: function (jqXHR, textStatus, errorThrown) {
+                           bootbox.alert(errorThrown);
+                       }
+
+            });
+        }
+    </script>
+    @*GuardarProveedores*@
+    <script>
+        function GuardarProveedores() {
+            var iId_Num_Linea = $("#hddIdLinea").val();
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+
+            debugger;
+            if (iId_Num_Linea.length != 0 & cId_Cve_Fmto.length != 0) {
+
+                $body = $("body");
+                var gridData = [];
+                $("#tblProveedores tbody tr").each(function (index) {
+
+                    gridData.push([]);
+                    gridData[index].push(new Array(3));
+
+                    $(this).children("td").find(':input,select').each(function (index2) {
+                        try {
+                            switch (index2) {
+                                case 0:
+                                    var Id_Num_Prov = $(this).val();
+                                    gridData[index][index2] = Id_Num_Prov;
+                                    break;
+                                case 1:
+                                    var Desc = $(this).val();
+                                    gridData[index][index2] = Desc;
+                                    break;
+                                case 2:
+                                    var Bit_Activo = $(this).is(':checked');
+                                    gridData[index][index2] = Bit_Activo;
+                                    break;
+                            }
+                        }
+                        catch (e) {
+                            bootbox.alert(e.message);
+                        }
+                    })
+                })
+
+                $.ajax({
+                    url: '@Url.Action("GuardarProveedores", "SalidaMercancia")',
+                    async: false,
+
+                    "type": "POST",
+                    "cache": false,
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        gridData: gridData//:strDetalleFolio
+                        , iId_Num_Linea: iId_Num_Linea
+                        , cId_Cve_Fmto: cId_Cve_Fmto
+                    }),
+                    //"dataType": "html",
+                    "success": function (data) {
+
+                        if (data.Success) {
+                            //alert("ok");
+                            cargaComboFtoTienda();
+                            $body.removeClass("loading");
+                            // bootbox.alert(data.Message)
+                            //location.reload();
+                        }
+
+                        else {
+                            $body.removeClass("loading");
+                            bootbox.alert(data.Message)
+                        }
+                    }
+
+                        ,
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $body.removeClass("loading");
+                        bootbox.alert(errorThrown);
+                    }
+                });
+            }
+        }
+    </script>
+}

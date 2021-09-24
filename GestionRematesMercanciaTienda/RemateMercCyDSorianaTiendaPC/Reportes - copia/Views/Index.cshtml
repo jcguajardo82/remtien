@@ -1,0 +1,303 @@
+﻿@*@model IEnumerable<EDApartadosSoriana.Reportes.ELApartadosXVencer>*@
+@{
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+
+
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a>   Reportes Recibo de Mercancia x Autorizar
+                    </h2>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <strong>Reportes :</strong>
+                                    @Html.DropDownList("ddlReportes", (SelectList)ViewData["ddlReportes"], new { @id = "ddlReportes", @class = "form-control", onchange = "ddlReportes_Change()" })
+                                    @*<select id="ddlReportes" name="ddlReportes" class="form-control" onchange="ddlReportes_Change()">
+                                            @foreach (SelectListItem option in (SelectList)ViewData["ddlReportes"])
+                                            {
+                                                <option value="@option.Value" @(option.Value == ViewBag.rpt ? "selected='selected'" : "")>@option.Text</option>
+                                            }
+                                        </select>*@
+                                    @*<br /><a class="btn btn-danger" href="javascript: pruebaImpresion();" target="_self"><i class="fa fa-print"></i> Mostrar</a>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="form-group">
+                                    <div class="row" id="divFiltrosUno">
+                                        <div class="col-lg-3">
+                                            <strong>Area :</strong>
+                                            @Html.DropDownList("Id_Num_AreaESMcia", (SelectList)ViewData["ddlArea"], new { @class = "form-control", @id = "ddlAreaFiltrosUno" })
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <strong>Folio :</strong>
+                                            @Html.TextBox("txtFolioFiltroUno", null, new
+                                       {
+                                           @class = "form-control",
+                                           @onkeypress = "return isNumber(event)",
+                                           @onkeyup = "return isNumber(event)",
+                                           @onkeydown = "javascript:onkeydown_txtFolioFiltroUno(event)"
+                                       })
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <br />
+                                            <a class="btn btn-danger" href="javascript: RptConfigUno();" target="_self"><i class="fa fa-print"></i> Mostrar</a>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="divFiltrosDos" style="display:none;">
+                                        <div class="col-lg-3">
+                                            <strong>Area :</strong>
+                                            @Html.DropDownList("ddlAreaFiltrosDos", (SelectList)ViewData["ddlArea"], new { @class = "form-control", @id = "ddlAreaFiltrosDos" })
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <strong>Tipo Ficha Salida :</strong>
+                                            @Html.DropDownList("ddlFichaSalidaFiltroDos", (SelectList)ViewData["ddlTipoFichaSalida"], new { @class = "form-control" })
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <strong>Folio :</strong>
+                                            @Html.TextBox("txtFolioFiltroDos", null, new { @class = "form-control"  , @onkeypress = "return isNumber(event)",
+                                           @onkeyup = "return isNumber(event)"
+                                       })
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <br />
+                                            <a class="btn btn-danger" href="javascript: Cargosxdev();" target="_self"><i class="fa fa-print"></i> Mostrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <iframe width='100%' height='800' src='http://bit.ly/1JxrtjR' frameborder='0' allowfullscreen></iframe>
+                                    </div>
+                                </div>
+
+                            </div>*@
+                        @*<style type="text/css">
+                            /*html, body {
+                                height: 100%;
+                            }*/
+
+                            .wrapper {
+                                width: 100%;
+                                height: 100%;
+                                margin: 0 auto;
+                                /*background: #CCC;*/
+                            }
+
+                            .h_iframe {
+                                position: relative;
+                            }
+
+                                .h_iframe .ratio {
+                                    display: block;
+                                    width: 100%;
+                                    height: auto;
+                                }
+
+                                .h_iframe iframe {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                        </style>*@
+                        @*<div class="wrapper">
+                            <div class="h_iframe">*@
+                                <!-- a transparent image is preferable -->
+                        <iframe width="100%"  id="frameReporte" src="" frameborder="0" allowfullscreen></iframe>
+                                @*<iframe id="frameReporte" src="" frameborder="0" allowfullscreen></iframe>*@
+                            @*</div>
+                            <p>Please scale the "result" window to notice the effect.</p>
+                        </div>*@
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @section Styles {
+
+            @Styles.Render("~/plugins/dataPickerStyles")
+        }
+
+        @section Scripts {
+            @Scripts.Render("~/plugins/flot")
+            @Scripts.Render("~/plugins/chartJs")
+            @Scripts.Render("~/plugins/peity")
+            @Scripts.Render("~/plugins/dataTables")
+
+
+            @Scripts.Render("~/plugins/dataPicker")
+
+            @*datetimepickwe*@
+            <script>
+                $('.date').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true,
+                    format: 'dd/mm/yyyy'
+                });
+            </script>
+            @*ddlReportes_Change - ocultarFiltros *@
+            <script>
+                function ddlReportes_Change() {
+                    var expression = $("#ddlReportes").val();
+                    ocultarFiltros(expression);
+
+                }
+                function ocultarFiltros(expression) {
+                    switch (expression) {
+                        case "n_cst_reporte_cargosxdev"://Cargos x Devoluci½n
+                        case "n_cst_reporte_integracion"://Integración Notas de Entrada
+                        case "n_cst_reporte_integra_dev"://Integración Devolución
+                        case "n_cst_reporte_fichasalida_mciamano"://Ficha de Salida Mcia. en Mano
+                        case "n_cst_reporte_recibo"://Acuse NE Jefe Deptal.
+                        case "n_cst_reporte_acuse_transf_dp"://Acuse TR Jefe Deptal.
+                            $("#divFiltrosDos").css("display", "none");
+                            $("#divFiltrosUno").css("display", "block");
+                            break;
+                        case "n_cst_reporte_fichasalida_mciadan":
+                            $("#divFiltrosUno").css("display", "none");
+                            $("#divFiltrosDos").css("display", "block");
+                            break;
+                    }
+                }
+            </script>
+            @*solo numeros copy paste - onkeydown_txtFolioFiltroUno2*@
+            <script type="text/javascript">
+                $('#txtFolioFiltroUno').bind('paste', function () {
+                    var el = this;
+                    setTimeout(function () {
+                        el.value = el.value.replace(/\D/g, '');
+                    }, 0);
+                });
+                $('#txtFolioFiltroDos').bind('paste', function () {
+                    var el = this;
+                    setTimeout(function () {
+                        el.value = el.value.replace(/\D/g, '');
+                    }, 0);
+                });
+                function onkeydown_txtFolioFiltroUno(e) {
+                    if (e.which == 9 || e.which == 13) {
+                        var id = $(e.target).attr("id")
+                        if (id == "txtFolioFiltroUno") {
+                            RptConfigUno();
+                        }
+                        if (id == "txtFolioFiltroDos") {
+                            RptConfigDos();
+                        }
+                    }
+                }
+            </script>
+
+            @*selected item combo reportes*@
+            <script>
+                $(document).ready(function () {
+
+                    if ("@ViewBag.rpt" != null & "@ViewBag.rpt" != "") {
+                        $("#ddlReportes option[value=" + "@ViewBag.rpt" + "]").attr("selected", true);
+                        ocultarFiltros("@ViewBag.rpt");
+                        $('#frameReporte').prop('src', '')
+                    }
+
+                })
+            </script>
+            @*RptConfigUno*@
+            <script>
+                function RptConfigUno() {
+
+                    var reporte = $("#ddlReportes").find(':selected').val();
+                    var folio = $("#txtFolioFiltroUno").val();
+                    var IdNumAreaESMcia = $("#ddlAreaFiltrosUno").find(':selected').val();;
+                    //string reporte,int IdNumAreaESMcia,int IdFolESMcia
+                    if (folio.length != 0) {
+                        $.ajax({
+                            type: 'GET',
+                            cache: false,
+                            datatype: 'html',
+                            url: '@Url.Action("RptConfigUno", "Reportes")',
+                            data: {
+                                reporte: reporte
+                                , IdNumAreaESMcia: IdNumAreaESMcia
+                                , folio: folio
+                            },
+                            success: function (data) {
+                                if (data.Success == true) {
+                                    var url2 ='@Url.Action()' +data.Message;
+                                    var url = data.Message;
+
+                                     bootbox.alert(url2);
+                                    var heigth = $(document).height();
+
+                                    $('#frameReporte').prop('src', url)
+                                    $('#frameReporte').prop('height', heigth)
+                                }
+                                else {
+                                    bootbox.alert(data.Message);
+                                }
+                            }
+                        ,
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                bootbox.alert(errorThrown);
+                            }
+
+                        });
+                    } else { $("#txtFolioFiltroUno").focus(); }
+                }
+            </script>
+            @*RptConfigDos*@
+            <script>
+                function RptConfigDos() {
+                    return;
+                    var reporte = $("#ddlReportes").find(':selected').val();
+                    var folio = $("#txtFolioFiltroUno").val();
+                    var IdNumAreaESMcia = $("#ddlAreaFiltrosUno").find(':selected').val();;
+                    //string reporte,int IdNumAreaESMcia,int IdFolESMcia
+                    if (folio.length != 0) {
+                        $.ajax({
+                            type: 'GET',
+                            cache: false,
+                            datatype: 'html',
+                            url: '@Url.Action("RptConfigUno", "Reportes")',
+                            data: {
+                                reporte: reporte
+                                , IdNumAreaESMcia: IdNumAreaESMcia
+                                , folio: folio
+                            },
+                            success: function (data) {
+                                // $("#frameReporte").attr("src", data.Message);
+                                //alert(data.Message);
+                                @*//  var url = ' @Url.Action("")' + data.Message;
+                                var url = data.Message;
+                                window.location = url;*@
+                            }
+                        ,
+                            error: function (jqXHR, textStatus, errorThrown) {
+                            }
+
+                        });
+                    } else { $("#txtFolioFiltroUno").focus(); }
+                }
+            </script>
+
+
+        }
+    </div>
+</div>

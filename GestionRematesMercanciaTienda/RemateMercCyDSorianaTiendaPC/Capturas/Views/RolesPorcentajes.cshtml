@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "RolesPorcentajes";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Roles y Porcentajes de Mercancía Caduca</h2>
+                    <div class="panel-body">
+                        <div class="input-group-btn ">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Formato de Tienda: </label>
+                                    @Html.DropDownList("Fmto_Tienda", (SelectList)ViewData["ddlFmtoTienda"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Formato de Tienda</span>
+                                </div> 
+                            </div>
+                            <div class="col-lg-3"> 
+                                <div class="form-group">
+                                    <label>Tipo Mercancía: </label>
+                                    @Html.DropDownList("Tipo_Mcia", (SelectList)ViewData["ddlTipoMcia"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el TipoMercancia</span>
+                                </div>                              
+                            </div>
+                            <div class="col-lg-1 ">
+                                <div class="form-group">
+                                    <label> </label>
+                                    <button class="btn btn-success btn-historico" >Historico</button>
+                                    @*<button class="btn btn-success btn-historico" data-toggle="modal" data-target="#ConsultaCatDelHis">Historico</button>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-1 ">
+                                <div class="form-group">
+                                    <label> </label>
+                                    <button class="btn btn-success btn-eliminadas" >Eliminadas</button>
+                                    @*<button class="btn btn-success btn-eliminadas" data-toggle="modal" data-target="#ConsultaCatDelHis">Eliminadas</button>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                @*<div class="form-group">
+                                    <a class="btn btn-danger" href="@Url.Action("ReportPENDIENTEPISO")" target="_blank"><i class="fa fa-print"></i>Imprimir</a>                                   
+                                </div>*@
+                            </div>
+                            <div class="col-lg-3">
+                                @*<div class="form-group">
+                                    <button class="btn btn-warning " type="button" onclick="javascript: AjaxSearch();"><i class="fa fa-binoculars"></i>Buscar </button>
+                                </div>*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Categoría: </label>
+                                    @Html.DropDownList("Cat_FtoTienda", (SelectList)ViewData["ddlCategoriaFmoTienda"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Categoría</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Periodicidad: </label>
+                                    @Html.DropDownList("Id_Periodicidad", (SelectList)ViewData["ddlPeriodicidad"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Periodicidad</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Dia del Mes: </label>
+                                    @Html.TextBox("DiaMes".Trim(), null, new { @class = "form-control", @placeholder = "Dia del Mes" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir dia del Mes</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Dia de la Semana: </label>                                    
+                                    @Html.DropDownList("DiaSemana", (SelectList)ViewData["ddlDiaSemana"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir dia de la Semana</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Dias de Aviso: </label>
+                                    @Html.TextBox("DiaAviso".Trim(), null, new { @class = "form-control", @placeholder = "Dias de Aviso" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir dias de Aviso</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 ">
+                                <div class="form-group">
+                                    <label> </label>
+                                    <button class="btn btn-success btn-add">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div id="divResults">
+                                @{Html.RenderPartial("~/Views/Shared/_PartialRptRolesPorcentajes.cshtml");}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-lg-12 text-right">                                 
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-savecat" type="button" >Guardar </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

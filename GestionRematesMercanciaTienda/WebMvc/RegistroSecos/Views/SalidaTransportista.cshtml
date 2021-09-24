@@ -1,0 +1,748 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body onload="funReady()">
+    <hr class="barra" />
+
+    <form id="formSalidaTransportista" action="@Url.Action("SalidaTransportista", "RegistroSecos")" method="get">
+        
+        <div id="Principal" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    @*<dt><span class="input-group-addon" id="basic-addon1">Opcion</span></dt>
+                        <dt><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></dt>*@
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">15.-SALIDA TPTA.</span></td></tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CEDIS:</span></td>
+                        <td><input type="text" id="input_CEDIS" value="@TempData["input_CEDIS"]" name="input_CEDIS" onkeypress="input_CEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">GUIA:</span></td>
+                        <td><input type="text" id="input_GUIA" value="@TempData["input_GUIA"]" name="input_GUIA" onkeypress="input_GUIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">DESTINO:</span></td>
+                        <td><input type="text" id="input_DESTINO" value="@TempData["input_DESTINO"]" name="input_DESTINO" onkeypress="input_DESTINO_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label id="lbl_DESCDESTINO">@TempData["lbl_DESCDESTINO"]</label></td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td></tr>
+                    @*<dt><label id="messageResult">LINCON</label></dt>*@
+                </table>
+            </div>
+        </div>
+
+        <div id="Confirma" style="display:none">
+            <table>
+                <tr><td colspan="2"><label id="lbl_PROVEEDOR">@TempData["lbl_PROVEEDOR"]</label></td></tr>
+
+                <tr>
+                    <td><span class="input-group-addon" id="sizing-addon3">MARCHAMO:</span></td>
+                    <td><input type="text" id="input_MARCHAMO" name="input_MARCHAMO" onkeypress="input_MARCHAMO_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                @*<tr>
+                        <td><span class="input-group-addon" id="basic-addon1">ESTADO</span></td>
+                        <td><input type="text" class="form-control" id="optionSelected" name="optionSelected" value="1" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                    </tr>*@
+                <tr><td colspan="2">¿MARCHAMO OK?</td></tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected2" name="optionSelected2" onkeypress="optionSelected2_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult2"]</label></td></tr>
+                @*<tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td></tr>*@
+                @*<dt>***SE CICLA PIDIENDO LOS MARCHAMOS***</dt>*@
+
+            </table>
+        </div>
+        <div id="Seguro" style="display:none">
+            <table>
+                <tr><td colspan="2">¿Está seguro de terminar la captura de Marchamos?</td></tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected3" name="optionSelected3" onkeypress="optionSelected3_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult3"]</label></td></tr>
+            </table>
+        </div>
+
+        <div id="DctoFac" style="display:none">
+            <table>
+                <tr colspan="2"><td><label>Datos Factura Flete</label></td></tr>
+                <tr>
+                    <td><label>Sin Documento</label></td>
+                    <td>
+                        @{
+                            <select id="cmb_DCTO" name="cmb_DCTO" onkeypress="cmb_DCTOKeypress(event)">
+                                @if (TempData["cmb_DCTO"] != null)
+                                {
+                                    foreach (System.Collections.DictionaryEntry elemento in (System.Collections.Hashtable)TempData["cmb_DCTO"])
+                                    {
+                                        <option value="@elemento.Key">@elemento.Value</option>
+                                    }
+                                }
+                            </select>
+                        }
+                    </td>
+                </tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected4" name="optionSelected4" onkeypress="optionSelected4_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult4"]</label></td></tr>
+            </table>
+        </div>
+
+        <div id="FacturaCaptura" style="display:none">
+            <table>
+                <tr>
+                    <td><label>Serie/Factura: </label></td>
+                    <td><input type="text" id="input_SERIE" value="@TempData["input_SERIE"]" name="input_SERIE" onkeypress="input_SERIE_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha: </label></td>
+                    <td><input type="text" id="input_FECHA" value="@TempData["input_FECHA"]" name="input_FECHA" onkeypress="input_FECHA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>Flete: </label></td>
+                    <td><input type="text" id="input_FLETE" name="input_FLETE" onkeypress="input_FLETE_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>IVA: </label></td>
+                    <td><input type="text" id="input_IVA" name="input_IVA" onkeypress="input_IVA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>Retenc: </label></td>
+                    <td><input type="text" id="input_RETENC" name="input_RETENC" onkeypress="input_RETENC_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>Maniobras: </label></td>
+                    <td><input type="text" id="input_MANIOBRAS" name="input_MANIOBRAS" onkeypress="input_MANIOBRAS_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><label>Req. Fiscales: </label></td>
+                    <td>
+                        @{
+                            <select id="cmb_FISCAL" name="cmb_FISCAL" onkeypress="cmb_FISCALKeypress(event)">
+                                @if (TempData["cmb_FISCAL"] != null)
+                                {
+                                    foreach (System.Collections.DictionaryEntry elemento in (System.Collections.Hashtable)TempData["cmb_FISCAL"])
+                                    {
+                                        <option value="@elemento.Key">@elemento.Value</option>
+                                    }
+                                }
+                            </select>
+                        }
+                    </td>
+                </tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected5" name="optionSelected5" onkeypress="optionSelected5_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult5"]</label></td></tr>
+            </table>
+        </div>
+
+        <div id="Factura" style="display:none">
+            <table>
+                <tr>
+                    <td><label>Serie/Factura: </label></td>
+                    <td><label id="lbl_SERIE">@TempData["lbl_SERIE"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha: </label></td>
+                    <td><label id="lbl_FECHA">@TempData["lbl_FECHA"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Flete: </label></td>
+                    <td><label id="lbl_FLETE">@TempData["lbl_FLETE"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>IVA: </label></td>
+                    <td><label id="lbl_IVA">@TempData["lbl_IVA"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Retenc: </label></td>
+                    <td><label id="lbl_RETENC">@TempData["lbl_RETENC"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Maniobras: </label></td>
+                    <td><label id="lbl_MANIOBRAS">@TempData["lbl_MANIOBRAS"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Req. Fiscales: </label></td>
+                    <td><label id="lbl_REQFISCAL">@TempData["lbl_REQFISCAL"]</label></td>
+                </tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected6" name="optionSelected6" onkeypress="optionSelected6_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-CONTINUAR</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult6"]</label></td></tr>
+            </table>
+        </div>
+
+        <div id="Resumen" style="display:none">
+            <table>
+                <tr>
+                    <td colspan="2"><label>@TempData["lbl_PROVEEDOR"]</label></td>
+
+                </tr>
+                <tr>
+                    <td><label>Guia: </label></td>
+                    <td><label id="messageResult">@TempData["input_GUIA"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Destino: </label></td>
+                    <td><label id="messageResult">@TempData["input_DESTINO"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Cantidad de Marchamos: </label></td>
+                    <td><label id="messageResult">@TempData["lbl_CANTMARCHAMO"]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha Salida: </label></td>
+                    <td><label id="messageResult">@TempData["lbl_FECHASALIDA"]</label></td>
+                </tr>
+                <tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="optionSelected7" name="optionSelected7" value="1" onkeypress="optionSelected7_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-CONTINUAR</span></td></tr>
+                <tr><td colspan="2"><label id="messageResult">@TempData["lblResult7"]</label></td></tr>
+            </table>
+        </div>
+        <input id="flagMarchamo" value="@TempData["flagMarchamo"]" style="visibility:hidden" />
+    </form>
+
+    <script>
+   
+        function funReady() {
+
+            var form = document.getElementById("flagMarchamo").value;
+            if (form != "") {
+                var ele = document.getElementById(form);
+                if (ele.style.display == "block") {
+                    ele.style.display = "none";
+                }
+                else {
+                    ele.style.display = "block";
+                }
+            }
+
+            switch (form) {                
+                case "Principal":
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+                case "Confirma":
+                    document.getElementById("input_MARCHAMO").focus();
+                    break;
+                case "Seguro":
+                    document.getElementById("optionSelected3").focus();
+                    break;
+                case "DctoFac":
+                    document.getElementById("optionSelected4").focus();
+                    break;
+                case "FacturaCaptura":
+                    document.getElementById("input_SERIE").focus();
+                    break;
+                case "Factura":
+                    document.getElementById("optionSelected6").focus();
+                    break;
+                case "Resumen":
+                    document.getElementById("optionSelected7").focus();
+                    break;
+
+                default:
+                    //document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+
+            if (document.getElementById("Principal").style.display == "block") {
+                if (document.getElementById("input_DESTINO").value != "") {
+                    document.getElementById("optionSelected").focus();
+                }
+            }            
+
+        }
+
+        function input_CEDIS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_CEDIS").value != "") {
+                        document.getElementById("input_GUIA").focus();
+                    }
+                    else {
+                        document.getElementById("input_CEDIS").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    var link = document.createElement('a');
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    break;
+                    break;
+            }
+        }
+
+        function input_GUIA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_GUIA").value != "") {
+                        document.getElementById("input_DESTINO").focus();
+                    }
+                    else {
+                        document.getElementById("input_GUIA").focus();
+                    }
+
+                    //$('form').submit();
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+        }
+
+        function input_DESTINO_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //document.getElementById("input_DESTINO").focus();
+                    // $('form').submit();
+                    if (document.getElementById("input_DESTINO").value != "") {
+                        document.getElementById("formSalidaTransportista").submit();
+                    }
+                    else {
+                        document.getElementById("input_DESTINO").focus();
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+        function cmb_DCTOKeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    document.getElementById("optionSelected4").focus();
+                    break;
+                    //esc
+                case 27:
+                    
+                    break;
+            }
+        }
+
+        function cmb_FISCALKeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    document.getElementById("optionSelected5").focus();
+                    
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_MANIOBRAS").focus();
+                    break;
+            }
+        }
+
+        function optionSelected_onkeypress(e) {
+           // var valueOption = $("#optionSelected").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //$('form').submit();
+                    var op = document.getElementById("optionSelected").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_DESTINO").focus();
+                    break;
+            }
+        }
+
+        function optionSelected2_onkeypress(e) {
+            //var valueOption = $("#optionSelected2").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //  $('form').submit();
+                    var op = document.getElementById("optionSelected2").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_DESTINO").focus();
+                    break;
+            }
+        }
+
+        function optionSelected3_onkeypress(e) {
+            // var valueOption = $("#optionSelected3").val();
+            var valueOption = document.getElementById("optionSelected3").value;
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    switch (valueOption) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                           // $('form').submit();
+
+                            break;
+                        case "2":
+                            var ele = document.getElementById("Confirma");
+                            if (ele.style.display == "block") {
+                                ele.style.display = "none";
+                                document.getElementById("input_MARCHAMO").focus();
+                            }
+                            else {
+                                ele.style.display = "block";
+
+                            }
+                            var ele = document.getElementById("Seguro");
+                            if (ele.style.display == "block") {
+                                ele.style.display = "none";
+
+                            }
+                            else {
+                                ele.style.display = "block";
+
+                            }
+                            break;
+                        default:
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                    } break;
+                    //esc
+                case 27:
+                    var ele = document.getElementById("Confirma");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+                        document.getElementById("input_MARCHAMO").focus();
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    var ele = document.getElementById("Seguro");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+            }
+        }
+
+        function optionSelected4_onkeypress(e) {
+            //var valueOption = $("#optionSelected4").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //      $('form').submit();
+                    var op = document.getElementById("optionSelected4").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected4").focus();
+                            break;
+                    }
+
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_DESTINO").focus();
+                    break;
+            }
+        }
+
+        function optionSelected5_onkeypress(e) {
+           // var valueOption = $("#optionSelected5").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    // $('form').submit();
+                    var op = document.getElementById("optionSelected5").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected5").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("cmb_FISCAL").focus();
+                    break;
+            }
+        }
+
+        function optionSelected6_onkeypress(e) {
+           // var valueOption = $("#optionSelected6").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    // $('form').submit();
+                    var op = document.getElementById("optionSelected6").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected6").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_DESTINO").focus();
+                    break;
+            }
+        }
+
+        function optionSelected7_onkeypress(e) {
+            //  var valueOption = $("#optionSelected7").val();
+            var valueOption = document.getElementById("optionSelected7").value;
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    switch (valueOption) {
+                        case "1":
+                            document.getElementById("formSalidaTransportista").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected7").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_DESTINO").focus();
+                    break;
+            }
+        }
+
+        function input_MARCHAMO_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_MARCHAMO").value != "") {
+                        document.getElementById("optionSelected2").focus();
+                    }
+                    else {
+                        document.getElementById("input_MARCHAMO").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+
+                    var ele = document.getElementById("Seguro");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+                        document.getElementById("optionSelected3").focus();
+                    }
+                    var ele = document.getElementById("Confirma");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+            }
+        }
+
+        function input_SERIE_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_SERIE").value != "") {
+                        document.getElementById("input_FECHA").focus();
+                    }
+                    else {
+                        document.getElementById("input_SERIE").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    
+                    break;
+            }
+        }
+
+        function input_FECHA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_FECHA").value != "") {
+                        document.getElementById("input_FLETE").focus();
+                    }
+                    else {
+                        document.getElementById("input_FECHA").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_FLETE").focus();
+                    break;
+            }
+        }
+
+        function input_FLETE_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_FLETE").value != "") {
+                        document.getElementById("input_IVA").focus();
+                    }
+                    else {
+                        document.getElementById("input_FLETE").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_FECHA").focus();
+                    break;
+            }
+        }
+
+        function input_IVA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_IVA").value != "") {
+                        document.getElementById("input_RETENC").focus();
+                    }
+                    else {
+                        document.getElementById("input_IVA").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_FLETE").focus();
+                    break;
+            }
+        }
+
+        function input_RETENC_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_RETENC").value != "") {
+                        document.getElementById("input_MANIOBRAS").focus();
+                    }
+                    else {
+                        document.getElementById("input_RETENC").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_IVA").focus();
+                    break;
+            }
+        }
+
+        function input_MANIOBRAS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_MANIOBRAS").value != "") {
+                        document.getElementById("cmb_FISCAL").focus();
+                    }
+                    else {
+                        document.getElementById("input_MANIOBRAS").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_RETENC").focus();
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="SampleApp" ng-controller="SampleCntrl">
+        <input type="text" ng-keydown="keydownevt()" ng-keyup="keyupevt()" ng-keypress="keypressevt()" />
+        <br />
+        Keydown KeyCode : <strong> {{keydownkeycode}} </strong><br />
+        Keyup KeyCode : <strong> {{keyupkeycode}} </strong><br />
+        Keypress KeyCode : <strong> {{keypresskeycode}} </strong><br />
+    </div>
+    <script>
+        var myapp = angular.module("SampleApp", []);
+        myapp.controller("SampleCntrl", function ($scope) {
+            $scope.keydownevt = function () {
+                $scope.keydownkeycode = event.keyCode;
+                $scope.keyupkeycode = "";
+                $scope.keypresskeycode = "";
+            };
+            $scope.keyupevt = function () {
+                $scope.keyupkeycode = event.keyCode;
+            };
+            $scope.keypressevt = function () {
+                $scope.keypresskeycode = event.keyCode;
+            };
+        });
+    </script>
+</body>
+</html>

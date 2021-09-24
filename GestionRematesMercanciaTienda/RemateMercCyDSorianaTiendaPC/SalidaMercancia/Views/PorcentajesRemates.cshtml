@@ -1,0 +1,474 @@
+﻿
+@{
+    ViewBag.Title = "PorcentajesRemates";
+}
+
+
+@{
+    ViewBag.Title = "Alta de Registro";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <h2 style="margin-top: 5px;">
+                            <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Porcentajes de Remates
+                        </h2>
+                        <div class="panel panel-default">
+                            <br />
+                            <div class="row">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <label style="padding-left: 25px;padding-right: 25px;">Formato Tienda: </label>
+                                    <div class="dropdown" style="padding-left: 25px;padding-right: 25px;">
+                                        @Html.DropDownList("Id_Cve_Fmto", (SelectList)ViewData["ddlFtoTienda"], "-- Tipo Exhibicion --"
+                           , new { id = "ddlFtoTienda", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <label style="padding-left: 25px;padding-right: 25px;">Categoria: </label>
+                                    <div class="dropdown" style="padding-left: 25px;padding-right: 25px;">
+                                        @Html.DropDownList("Id_Num_Categ", (SelectList)ViewData["ddlCategoria"], "-- Area --"
+                           , new { id = "ddlCategoria", @class = "form-control", onchange = "cargaComboLinea()" })
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <label style="padding-left: 25px;padding-right: 25px;">Linea: </label>
+                                    <div class="dropdown" style="padding-left: 25px;padding-right: 25px;">
+                                        @Html.DropDownList("Id_Num_Linea", (SelectList)ViewData["ddlLinea"], "-- Linea --"
+                           , new { id = "ddlLinea", @class = "form-control", onchange = "onchangeLinea()" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <br />
+                            <div class="row" style="padding-right:5px;padding-left:5px;">
+                                <div class="col-sm-4 col-md-4 col-lg-4 text-center" id="divDescBajo">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-lg-4 text-left" style="padding-top: 5px;padding-right: 5px;padding-bottom:5px">
+                                            <div class="btn-group" role="group" aria-label="...">
+                                                @*<button type="button" class="btn btn-default" onclick="AddRowBaja();" title="Agregar">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </button>*@
+                                                <button type="button" class="btn btn-default" onclick="GuardarBaja();" title="Guardar">
+                                                    <i class="fa fa-save" aria-hidden="true"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 text-left">
+                                            <h4>DESCUENTO BAJO</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ccol-sm-12 col-md-12 col-lg-12">
+                                            <div id="table-scroll">
+                                                <table id="tblDescBajo" class="table table-bordered" style="overflow: scroll">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">Etapa</th>
+                                                            <th class="text-center">Dias</th>
+                                                            <th class="text-center">Descuento</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4 text-center" id="divDescMedio">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-lg-4 text-left" style="padding-top: 5px;padding-right: 5px;padding-bottom:5px">
+                                            <div class="btn-group" role="group" aria-label="...">
+                                                <button type="button" class="btn btn-default" onclick="AddRowMedio();" title="Agregar">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-default" onclick="GuardarMedio();" title="Guardar">
+                                                    <i class="fa fa-save" aria-hidden="true"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 text-left">
+                                            <h4>DESCUENTO MEDIO</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ccol-sm-12 col-md-12 col-lg-12">
+                                            <div id="table-scroll">
+                                                <table id="tblDescBajo" class="table table-bordered" style="overflow: scroll">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">Etapa</th>
+                                                            <th class="text-center">Dias</th>
+                                                            <th class="text-center">Descuento</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4 text-center" id="divDescAlto">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4 col-lg-4 text-left" style="padding-top: 5px;padding-right: 5px;padding-bottom:5px">
+                                            <div class="btn-group" role="group" aria-label="...">
+                                                <button type="button" class="btn btn-default" onclick="AddRowAlto();" title="Agregar">
+                                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-default" onclick="GuardarAlto();" title="Guardar">
+                                                    <i class="fa fa-save" aria-hidden="true"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 text-left">
+                                            <h4>DESCUENTO ALTO</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="ccol-sm-12 col-md-12 col-lg-12">
+                                            <div id="table-scroll">
+                                                <table id="tblDescBajo" class="table table-bordered" style="overflow: scroll">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center" style="width:10%;">Etapa</th>
+                                                            <th class="text-center" style="width:10%;">Dias</th>
+                                                            <th class="text-center" style="width:80%;">Descuento</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/flot")
+    @Scripts.Render("~/plugins/chartJs")
+    @Scripts.Render("~/plugins/peity")
+    @Scripts.Render("~/plugins/dataTables")
+    @Styles.Render("~/plugins/clockpickerStyles")
+    @Styles.Render("~/plugins/datapickerStyles")
+    @Scripts.Render("~/plugins/dataPicker")
+
+    @*Llena combo gpocat*@
+    <script>
+        function cargaComboLinea() {
+
+            var iId_Num_Categ = $("#ddlCategoria").val();
+            if (iId_Num_Categ.length != 0) {
+                $("#ddlLinea").html("");
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    datatype: 'html',
+                    //async: false,
+                    url: '@Url.Action("iniciarComboLinea", "SalidaMercancia")',
+                    data: {
+                        iId_Num_Categ: iId_Num_Categ
+                    },
+                    success: function (data) {
+                        debugger;
+                        $("#ddlLinea").html(""); // clear before appending new list
+                        $("#ddlLinea").append(
+                                $('<option></option>').val("").html("-- Linea --"));
+                        $.each(data, function (i, cat) {
+                            $("#ddlLinea").append(
+                                $('<option></option>').val(cat.Id_Num_Linea).html(cat.Desc_Linea));
+                        });
+
+                    }
+                    , error: function (jqXHR, textStatus, errorThrown) {
+                        bootbox.alert(errorThrown);
+                    }
+
+                });
+            }
+        }
+    </script>
+    @*onchangeLinea*@
+    <script>
+        function onchangeLinea() {
+            cargatblDescBajo();
+        }
+    </script>
+    @*cargatblDescBajo*@
+    <script>
+        function cargatblDescBajo() {
+            var iId_Num_Linea = $("#ddlLinea").val();
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+
+            if (iId_Num_Linea.length != 0 || cId_Cve_Fmto.length != 0) {
+
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    datatype: 'html',
+                    //async: false,
+                    url: '@Url.Action("ConsultaRemateBajo", "SalidaMercancia")',
+                    data: {
+                        iId_Num_Linea: iId_Num_Linea
+                        , cId_Cve_Fmto: cId_Cve_Fmto
+                    },
+                    success: function (data) {
+                        // bootbox.alert("ok");
+                        var maxEtapaCapurada = 0;
+                        $("#tblDescBajo tbody").empty()
+                        if (data.length != 0) {
+                            $.each(data, function (index, row) {
+                                AddRowBaja();
+                                $('#Id_Num_EtapaBajo' + nextRowID).val(row.Id_Num_Etapa);
+                                $('#Cant_DiasBajo' + nextRowID).val(row.Cant_Dias);
+                                $('#Porc_DesctoBajo' + nextRowID).val(row.Porc_Descto);
+                                if (row.Id_Num_Linea == 0) {
+                                    $('#Cant_DiasBajo' + nextRowID).attr('disabled', true);
+                                    $('#Porc_DesctoBajo' + nextRowID).attr('disabled', true);
+
+                                }
+                                else {
+                                    maxEtapaCapurada = row.Id_Num_Etapa;
+                                }
+                            })
+                            debugger;
+                            maxEtapaCapurada += 1;
+                            $('#Cant_DiasBajo' + maxEtapaCapurada).attr('disabled', false);
+                            $('#Porc_DesctoBajo' + maxEtapaCapurada).attr('disabled', false);
+                        }
+                        else {
+                            $("#tblDescBajo tbody").empty();
+                            bootbox.alert("No hay datos disponibles en la tabla");
+                        }
+
+                    }
+                    , error: function (jqXHR, textStatus, errorThrown) {
+                        bootbox.alert(errorThrown);
+                    }
+
+                });
+            }
+        }
+    </script>
+    @*Add Rows*@
+    <script>
+        var nextRowID = 0;
+        function AddRowBaja() {
+            nextRowID = nextRowID + 1;
+
+            $('#tblDescBajo').append('<tr id=\'rowBajo' + nextRowID + '\'>' +
+
+                   '<td style="width:10%;"><input disabled maxlength="1"  onkeyup=\'javascript:return isNumber(event)\' onkeypress=\'javascript:return isNumber(event)\'  type=\'text\' name=\'Id_Num_EtapaBajo' + nextRowID
+                   + '\' id=\'Id_Num_EtapaBajo' + nextRowID + '\'  class=\'form-control-size \' style=\';font-size: 11px;\' /></td>' +
+                   '<td style="width:10%;"><input onkeydown=\'onkeydown_CancelarDescuento(event,this,' + nextRowID + ')\' maxlength="2" type=\'text\' name=\'Cant_DiasBajo' + nextRowID + '\' id=\'Cant_DiasBajo' + nextRowID + '\'  class=\'form-control-size \' style=\'font-size: 11px;text-align: right;\' /></td>' +
+                   '<td style="width:80%;"><input onkeyup=\'javascript:return isNumber(event)\' onkeypress=\'javascript:return isNumber(event)\' onkeydown=\'onkeydown_Descuento(event,this,' + nextRowID + ')\' step=\'1\' placeholder="Valor Max 99" min=\'1\' max=\'99\'  type=\'number\' name=\'Porc_DesctoBajo' + nextRowID + '\' id=\'Porc_DesctoBajo' + nextRowID + '\'  class=\'form-control-size \' style=\'font-size: 11px;width:100%;text-align: right;\' /></td>' +
+
+                   '</tr>');
+        }
+    </script>
+    @*load*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+        });
+    </script>
+    @*Guardar Baja*@
+    <script>
+        function GuardarBaja() {
+            var iId_Num_Linea = $("#ddlLinea").val();
+            var cId_Cve_Fmto = $("#ddlFtoTienda").val();
+
+            debugger;
+            if (iId_Num_Linea.length != 0 & cId_Cve_Fmto.length != 0) {
+
+                $body = $("body");
+                var gridData = [];
+                $("#tblDescBajo tbody tr").each(function (index) {
+
+                    gridData.push([]);
+                    gridData[index].push(new Array(3));
+
+                    $(this).children("td").find(':input,select').each(function (index2) {
+                        try {
+                            switch (index2) {
+                                case 0:
+                                    var Id_Num_Etapa = $(this).val();
+                                    gridData[index][index2] = Id_Num_Etapa;
+                                    break;
+                                case 1:
+                                    var Cant_Dias = $(this).val();
+                                    if (Cant_Dias.length == 0)
+                                    {
+                                        Cant_Dias = 0;
+                                    }
+
+                                    gridData[index][index2] = Cant_Dias;
+                                    break;
+                                case 2:
+                                    var Porc_Descto = $(this).val();
+                                    if (Porc_Descto.length == 0) {
+                                        Porc_Descto = 0;
+                                    }
+                                    gridData[index][index2] = Porc_Descto;
+                                    break;
+                            }
+                        }
+                        catch (e) {
+                            bootbox.alert(e.message);
+                        }
+                    })
+                })
+
+
+                @*type: 'GET',
+                cache: false,
+                async: true,
+                datatype: 'html',
+                url: '@Url.Action("Busqueda", "Reportes")',*@
+
+                $.ajax({                  
+                    "type": "POST",
+                    "cache": false,
+                    contentType: 'application/json',
+                    url: '@Url.Action("GuardarBaja", "SalidaMercancia")',
+                    data: JSON.stringify({
+                        gridData: gridData//:strDetalleFolio
+                        , iId_Num_Linea: iId_Num_Linea
+                        , cId_Cve_Fmto: cId_Cve_Fmto
+                    }),
+                    //"dataType": "html",
+                    "success": function (data) {
+
+                        if (data.Success) {
+                            nextRowID = 0;
+                            cargatblDescBajo();
+                            $body.removeClass("loading");
+                            // bootbox.alert(data.Message)
+                            //location.reload();
+                        }
+
+                        else {
+                            $body.removeClass("loading");
+                            bootbox.alert(data.Message)
+                        }
+                    }
+
+                        ,
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $body.removeClass("loading");
+                        bootbox.alert(errorThrown);
+                    }
+                });
+            }
+        }
+    </script>
+    @*removeRow*@
+    <script>
+        function removeRowBajo(selector) {
+
+            $('#rowBajo' + selector).remove();
+            //document.getElementById("tabla").deleteRow(selector);
+        }
+    </script>
+    <script>
+        function onkeydown_Descuento(event, e, rowId) {          
+
+            switch (event.which) {
+              
+                case 9:
+                case 13:
+                case 19:
+                    validaDescuento(event,e, rowId);
+                    break;
+            }
+        }
+
+        function onkeydown_CancelarDescuento(event, e, rowId) {
+
+            switch (event.which) {
+
+                case 27:
+                    if (parseInt(rowId) > 1) {
+                        $('#Cant_DiasBajo' + rowId).attr('disabled', true);
+                        $('#Porc_DesctoBajo' + rowId).attr('disabled', true);
+                        $('#Cant_DiasBajo' + rowId).val('0');
+                        $('#Porc_DesctoBajo' + rowId).val('0');
+                    }
+                    break;
+            }
+        }
+
+        function validaDescuento(event,e, rowId) {            
+            var descuento = e.value;
+            if (descuento.length != 0) {
+                if (descuento > 99 & descuento < 1) {
+                    //alert(descuento);
+                    e.value = "1";
+                    e.focus();
+                }
+                else if (descuento.length > 2) {
+                    e.value = "1";
+                    e.focus();
+                }
+                else {
+                    var habilitar = true;
+                    if (rowId != 1) {
+                        debugger;
+                        var renglon = (rowId - 1);
+                        var descAnt = $("#Porc_DesctoBajo" + renglon).val();
+
+                        if (parseInt(descAnt) >= parseInt(descuento)) {
+                            habilitar = false;
+                            e.value = ("");
+                            alert("es menor el nuevo");
+                            e.focus();
+
+                        }
+
+                        else if (habilitar == true) {
+                            debugger;
+                            var renglon = (rowId + 1);
+                            $('#Cant_DiasBajo' + renglon).attr('disabled', false);
+                            $('#Porc_DesctoBajo' + renglon).attr('disabled', false);
+                            $('#Cant_DiasBajo' + renglon).val("");
+                            $('#Cant_DiasBajo' + renglon).focus();
+
+                            if (event.which == 9) {                                
+                                $('#Cant_DiasBajo' + renglon).focus();
+                                event.preventDefault();
+                            }
+                        }
+                    }
+                    else {
+                        $('#Cant_DiasBajo2').attr('disabled', false);
+                        $('#Porc_DesctoBajo2').attr('disabled', false);
+                        $('#Cant_DiasBajo2').val("");
+                        $('#Cant_DiasBajo2').focus();
+                        if (event.which == 9) {
+                           
+                            event.preventDefault();
+                        }
+                    }
+
+                }
+            }
+        }
+    </script>
+   
+}

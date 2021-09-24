@@ -1,0 +1,438 @@
+﻿
+@{
+    ViewBag.Title = "Navegacion";
+    Layout = "~/Shared/Views/_LayoutLight.cshtml";
+}
+
+<h2>Navegacion</h2>
+<script src="~/Scripts/jquery.mobile-1.4.5.js"></script>
+<script src="~/Scripts/jquery.mobile-1.4.5.min.js"></script>
+
+<form>
+    <label>href: </label> <input type="text" id="menuSelected" name="menuSelected" onkeypress="menuSelected_keypress(event)" value="1"><br />
+    <label>lower IE: </label> <input type="text" id="cedis" name="cedis" onkeypress="menuSelected2_keypress(event)" value="1"><br />
+    <label>value: </label> <input type="text" id="butonKeypress" name="butonKeypress" onkeypress="butonKeypress_keypress(event)" value="1"><br />
+    <label>keycode: </label> <input type="text" id="butonKeypress2" name="butonKeypress2" onkeypress="butonKeypress2_keypress(event)" value="1"><br />
+    <label>value2: </label> <input type="text" id="butonKeypress3" name="butonKeypress3" onkeypress="butonKeypress3_keypress(event)" value="1"><br />
+
+    <label>Cedis: </label> <input type="text" id="cedis" name="cedis" onkeypress="cedis_keypress(event)" value="@TempData["cedis"]"><br>
+    <label>Tarima: </label> <input type="text" id="lname" name="lname" onkeypress="lname_keypress(event)"><br>
+    <label>Show modal: </label> <input type="text" id="modal_show" name="modal_show" onkeypress="modal_show_keypress(event)"><br>
+
+    <label id="messageLabel">@TempData["messageLbl"]</label>
+    @*<input type="submit" value="Submit">*@
+
+    <div id="karl" style="display:none">
+        <p><strong>Karl's Pizzas</strong></p>
+        <p>1 Main Street, Maintown.</p>
+        <p>Delivers 6pm to 2am</p>
+        <p><a href="tel:11231234567">Call Karl's Pizza</a></p>
+    </div>
+
+
+</form>
+
+
+<script>
+    $(document).ready(function () {
+
+        var xhr = window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
+        if (xhr === null) {
+            alert("No support for Ajax");
+        }
+        else { alert("Supported for Ajax"); }
+
+
+        function menuSelected_keypress(e) {
+            var valueOption = $("#menuOption").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            alert(valueOption);
+            alert(keyCode);
+
+
+
+
+            switch (keyCode) {
+
+
+                //enter
+                case 13:
+                    switch (valueOption) {
+                        case "1":
+                            var url = '@Url.Action("Inicio_1_1", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "11":
+                            var url = '@Url.Action("ArriboTransportista", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "12":
+                            var url = '@Url.Action("ControlMarchamos", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "13":
+                            var url = '@Url.Action("ConfirmaTarima", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "14":
+                            var url = '@Url.Action("RegistroMercanciaIncidencia", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "15":
+                            var url = '@Url.Action("SalidaTransportista", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "16":
+                            var url = '@Url.Action("CerrarEmbarque", "RegistroSecos")';
+                            window.location.href = url;
+                            break;
+                        case "17":
+                            var url = '@Url.Action("Inicio_1_7", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "171":
+                            var url = '@Url.Action("ConfGuiaAuditar", "AuditoriaGuia")';
+                            window.location.href = url;
+                            break;
+                        case "172":
+                            var url = '@Url.Action("ConfTarimaAudita", "AuditoriaGuia")';
+                            window.location.href = url;
+                            break;
+                        case "173":
+                            var url = '@Url.Action("AuditoriaTarima", "AuditoriaGuia")';
+                            window.location.href = url;
+                            break;
+                        case "174":
+                            var url = '@Url.Action("CierreAuditoria", "AuditoriaGuia")';
+                            window.location.href = url;
+                            break;
+                        case "175":
+                            var url = '@Url.Action("ImprimirAuditoria", "AuditoriaGuia")';
+                            window.location.href = url;
+                            break;
+
+                        case "2":
+                            var url = '@Url.Action("Inicio_2", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "21":
+                            var url = '@Url.Action("Inicio_2_1", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "22":
+                            var url = '@Url.Action("Inicio_2_2", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "23":
+                            var url = '@Url.Action("Inicio_2_3", "Menu")';
+                            window.location.href = url;
+                            break;
+                        case "24":
+                            var url = '@Url.Action("AutorizaDevolucion", "RegistroDeMercancia")';
+                            window.location.href = url;
+                            break;
+                        case "25":
+                            var url = '@Url.Action("CapturaDevolucion", "RegistroDeMercancia")';
+                            window.location.href = url;
+                            break;
+                        case "26":
+                            var url = '@Url.Action("DatosDeEnvio", "RegistroDeMercancia")';
+                            window.location.href = url;
+                            break;
+                        case "27":
+                            var url = '@Url.Action("RevisaDatosFactura", "RegistroDeMercancia")';
+                            window.location.href = url;
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    break;
+            }
+        }
+
+
+        function menuSelected2_keypress(e) {
+            var link = document.createElement('a');
+            var url = '@Url.Action("ConfGuiaAuditar", "AuditoriaGuia")';
+            link.href = url;
+            document.body.appendChild(link);
+            link.click();
+
+
+        }
+
+
+
+    });
+
+
+
+    function cedis_keypress(e) {
+
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+
+        switch (keyCode) {
+
+            //enter
+            case 13:
+                document.getElementById("lname").focus();
+                break;
+                //esc
+            case 27:
+                document.getElementById("menuOption").focus();
+                break;
+        }
+    }
+    function lname_keypress(e) {
+
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+
+
+        switch (keyCode) {
+
+            //enter
+            case 13:
+                alert("Proceso finalizado")
+
+                var elem = document.getElementById("karl");
+                elem.style.display = (true ? "block" : "none");
+
+                break;
+                //esc
+            case 27:
+                document.getElementById("cedis").focus();
+                break;
+        }
+    }
+
+    function toggle(id, on) {
+        var elem = document.getElementById(id);
+        elem.style.display = (on ? "block" : "none");
+    }
+    function hideAll() {
+        toggle("base", false);
+        toggle("karl", false);
+        toggle("juan", false);
+    }
+    function showDiv(item) {
+        hideAll();
+        toggle(item, true);
+    }
+
+    function getData() {
+        var name = document.getElementById("idName").value;
+        window.XMLHttpRequest.open(
+           "GET", "http://www.example.com/data?name=" + name);
+        window.XMLHttpRequest.send();
+        idResult.innerText = window.XMLHttpRequest.responseText;
+    }
+
+    function butonKeypress_keypress(e) {
+        
+        alert($("#butonKeypress").val());
+        @*var url = '@Url.Action("ValidaCedis", "AuditoriaGuia")';
+        var value = '{ "cedis": "5554"}';
+
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for older browsers
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                alert(xmlhttp.responseText);
+            }
+        };
+        xmlhttp.open("POST",url, true);
+        xmlhttp.send();*@
+
+
+    }
+
+    function butonKeypress2_keypress(e) {
+
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+        //alert(keyCode);
+
+        alert(e.val);
+
+        alert($('input:text[name=cedis]').val());
+        //saco el valor accediendo al id del input = nombre
+        alert($("#cedis").val());
+        //saco el valor accediendo al class del input = nombre   
+        alert($(".cedis").val());
+
+    }
+
+
+    
+    function butonKeypress3_keypress(e) {
+
+        alert($("input[name=butonKeypress3]").val());
+    }
+
+    function redirect(url) {
+        var ua = navigator.userAgent.toLowerCase(),
+            isIE = ua.indexOf('msie') !== -1,
+            version = parseInt(ua.substr(4, 2), 10);
+
+        // Internet Explorer 8 and lower
+        if (isIE && version < 9) {
+            var link = document.createElement('a');
+            link.href = url;
+            document.body.appendChild(link);
+            link.click();
+        }
+
+            // All other browsers can use the standard window.location.href (they don't lose HTTP_REFERER like Internet Explorer 8 & lower does)
+        else {
+            window.location.href = url;
+        }
+    }
+
+    function menuSelected2_keypress(e) {
+
+        //var valueOption = $("#menuOption").val();
+        //var keyCode = e.keyCode ? e.keyCode : e.which;
+
+        //alert(valueOption);
+        //alert(keyCode);
+        var ced =$("#cedis").val();
+        
+
+        var link = document.createElement('a');
+        var url = '@Url.Action("ConfGuiaAuditar", "AuditoriaGuia", new { cedis = "param-id" }, null)';
+        var link = document.createElement('a');
+
+        url = url.replace("param-id", ced);
+
+        link.href = url;
+        document.body.appendChild(link);
+
+        link.click();
+
+
+    }
+
+
+    function modal_show_keypress(e) {
+        var elem = document.getElementById("karl");
+        elem.style.display = (true ? "block" : "none");
+    }
+
+
+    function menuSelected_keypress(e) {
+        var valueOption = $("#menuOption").val();
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+
+        alert(valueOption);
+        alert(keyCode);
+
+
+
+
+        switch (keyCode) {
+
+
+            //enter
+            case 13:
+                switch (valueOption) {
+                    case "1":
+                        var url = '@Url.Action("Inicio_1_1", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "11":
+                        var url = '@Url.Action("ArriboTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "12":
+                        var url = '@Url.Action("ControlMarchamos", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "13":
+                        var url = '@Url.Action("ConfirmaTarima", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "14":
+                        var url = '@Url.Action("RegistroMercanciaIncidencia", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "15":
+                        var url = '@Url.Action("SalidaTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "16":
+                        var url = '@Url.Action("CerrarEmbarque", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "17":
+                        var url = '@Url.Action("Inicio_1_7", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "171":
+                        var url = '@Url.Action("ConfGuiaAuditar", "AuditoriaGuia")';
+                        window.location.href = url;
+                        break;
+                    case "172":
+                        var url = '@Url.Action("ConfTarimaAudita", "AuditoriaGuia")';
+                        window.location.href = url;
+                        break;
+                    case "173":
+                        var url = '@Url.Action("AuditoriaTarima", "AuditoriaGuia")';
+                        window.location.href = url;
+                        break;
+                    case "174":
+                        var url = '@Url.Action("CierreAuditoria", "AuditoriaGuia")';
+                        window.location.href = url;
+                        break;
+                    case "175":
+                        var url = '@Url.Action("ImprimirAuditoria", "AuditoriaGuia")';
+                        window.location.href = url;
+                        break;
+
+                    case "2":
+                        var url = '@Url.Action("Inicio_2", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "21":
+                        var url = '@Url.Action("Inicio_2_1", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "22":
+                        var url = '@Url.Action("Inicio_2_2", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "23":
+                        var url = '@Url.Action("Inicio_2_3", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "24":
+                        var url = '@Url.Action("AutorizaDevolucion", "RegistroDeMercancia")';
+                        window.location.href = url;
+                        break;
+                    case "25":
+                        var url = '@Url.Action("CapturaDevolucion", "RegistroDeMercancia")';
+                        window.location.href = url;
+                        break;
+                    case "26":
+                        var url = '@Url.Action("DatosDeEnvio", "RegistroDeMercancia")';
+                        window.location.href = url;
+                        break;
+                    case "27":
+                        var url = '@Url.Action("RevisaDatosFactura", "RegistroDeMercancia")';
+                        window.location.href = url;
+                        break;
+                }
+                break;
+                //esc
+            case 27:
+                break;
+        }
+    }
+
+
+</script>

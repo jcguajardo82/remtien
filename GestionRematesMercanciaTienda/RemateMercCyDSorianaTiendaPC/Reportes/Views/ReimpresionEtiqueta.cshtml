@@ -1,0 +1,106 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRReimpresionEtiqueta>
+@{
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+@{
+
+    var Fecha = String.Format("{0:d/M/yyyy}", DateTime.Now);
+    if (ViewData["ddlSrcFolioEtiqueta"] == null)
+    {
+        List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem> cat = new List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem>();
+        EDReciboTiendaSoriana.Captura.EDRConsultaListItem item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item.Descripcion = "Seleccione";
+        item.Id = -1;
+        cat.Add(item);
+        var dropdownVD = new SelectList(cat, "Id", "Descripcion");
+        ViewData["ddlSrcFolioEtiqueta"] = dropdownVD;
+    }
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Reimpresión Etiqueta
+                    </h2>
+                    <div class="panel-body">
+                        <div class="input-group-btn ">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Fecha : </label>
+                                    <div class="input-group date" id="FechaEtiquetaDate">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        @Html.TextBox("FechaEtiqueta", null, new { @class = "form-control datepicker", @placeholder = "Fecha" })
+                                    </div>
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Fecha Folio</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Folio de captura :</label>
+                                    @Html.DropDownList("FolCapEtiqueta", (SelectList)ViewData["ddlSrcFolioEtiqueta"], new { @class = "form-control" })
+                                    
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Folio</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-warning btn-searchreimpetiqueta" type="button"><i class="fa fa-binoculars"></i>Buscar </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-success btnReImoEtiqueta" type="button">Reimprimir Etiqueta </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-9">
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div id="divResults">
+                                @*@{Html.RenderPartial("~/Views/Shared/_PartialReporteMerma.cshtml");}*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @section Styles {
+
+            @Styles.Render("~/plugins/dataPickerStyles")
+        }
+        @section Scripts {
+            @Scripts.Render("~/plugins/flot")
+            @Scripts.Render("~/plugins/chartJs")
+            @Scripts.Render("~/plugins/peity")
+            @Scripts.Render("~/plugins/dataTables")
+            @Scripts.Render("~/plugins/dataPicker")
+            @Scripts.Render("~/plugins/slimScroll")
+            @Scripts.Render("~/Scripts/RepReimpresionEtiqueta")
+        }
+
+
+
+    </div>
+</div>
+
+
+

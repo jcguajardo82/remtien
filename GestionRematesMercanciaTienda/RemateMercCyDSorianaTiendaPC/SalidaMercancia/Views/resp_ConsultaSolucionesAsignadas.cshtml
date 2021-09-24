@@ -1,0 +1,287 @@
+﻿
+@{
+    ViewBag.Title = "LineasReparacion";
+}
+
+
+@{
+    ViewBag.Title = "Alta de Registro";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+    var FechaFinal = String.Format("{0:dd/MM/yyyy}", DateTime.Now);
+    var FechaInicial = String.Format("{0:dd/MM/yyyy}", DateTime.Now.AddDays(-90));
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <br />
+                        <h2 style="margin-top: 5px;">
+                            <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Soluciones Asignadas
+                        </h2>
+                        <div class="panel panel-default" style="padding-left: 10px;padding-right:10px;">
+                            <div class="row" style="padding-top:15px;">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">F. Entrada:</span>
+                                        <div class="input-group date">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            @Html.TextBox("txtFechaInicio", FechaInicial, new { @class = "form-control datepicker", @placeholder = "Fecha Inicio" })<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">F. Salida:</span>
+                                        @*<input type="text" id="o_fSalida" name="o_fSalida" class="form-control" placeholder="17/03/2017" aria-describedby="basic-addon1">*@
+                                        <div class="input-group date">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            @Html.TextBox("txtFechaFin", FechaFinal, new { @class = "form-control datepicker", @placeholder = "Fecha Fin" })<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div><input type="button" class="btn btn-success btn-xs" onclick="onclick_Buscar()" value="Buscar" id="btnBuscar"></div>
+                            </div>
+                            <div class="row" id="gridFolios" style="padding-top:10px">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div id="table-scroll">
+                                        <table id="tblSoluciones" class="table table-striped table-bordered table-hover dataTables-example gvv" style="overflow: scroll">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center small">Folio</th>
+                                                    <th class="text-center small">Fecha<br /> Registro</th>
+                                                    <th class="text-center small">Código</th>
+                                                    <th class="text-center small">Descripción</th>
+                                                    <th class="text-center small">Proveedor</th>
+                                                    <th class="text-center small">Solución</th>
+                                                    <th class="text-center small">Folio Gen</th>
+                                                    <th class="text-center small">Código <br /> Remate</th>
+                                                    <th class="text-center small">Fecha <br /> Reparación</th>
+                                                    <th class="text-center small">F. Limite <br /> Reparación</th>
+                                                    <th class="text-center small">Observaciones</th>
+                                                    <th class="text-center small">Folio Origen</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                @{
+
+                                                    foreach (var dev in ViewBag.listSoluciones)
+                                                    {
+                                                        <tr>
+                                                            <td class="text-center small"><div class="text-muted" id="lblId_Fol_GMD@(dev.Id_Fol_GMD)"> @dev.Id_Fol_GMD</div></td>
+                                                            <td class="text-center small">@dev.Fecx_Registro.ToShortDateString() </td>
+                                                            <td class="text-center small"><div id="lblNum_CodBarra@(dev.Id_Fol_GMD)">@dev.Num_CodBarra</div></td>
+                                                            <td class="text-center small"><div id="lblddDesc_Ensamb@(dev.Id_Fol_GMD)">@dev.ddDesc_Ensamb</div></td>
+                                                            <td class="text-center small"><div id="lblRazonSocial@(dev.Id_Fol_GMD)">@dev.RazonSocial</div></td>
+                                                            <td class="text-center small">@dev.Desc_TipoSol</td>
+                                                            <td class="text-center small">@dev.FolioGen</td>
+                                                            <td class="text-center small"> @dev.CodigoRemate</td>
+                                                            <td class="text-center small">
+                                                                @if (dev.Fec_Reparada != null)
+                                                                { @dev.Fec_Reparada.ToShortDateString()}
+                                                            </td>
+                                                            <td class="text-center small">
+                                                                @if (dev.Fec_LimRepacion != null)
+                                                                { @dev.Fec_LimRepacion.ToShortDateString()}
+                                                            </td>
+                                                            <td class="text-center small"> @dev.Observaciones</td>
+                                                            <td class="text-center small">@dev.Id_Fol_GMDPadre</td>
+                                                            @*<td class="text-right" style="vertical-align:middle;text-align:center;background-color:#EEEEEE">
+                                                                    <input type="button" class="btn btn-success btn-xs" onclick="onclick_Solucionar(@dev.Id_Fol_GMD)" value="Solucionar" id="btnSolucionar" />
+                                                                </td>
+                                                                <td style="padding-left:5px;display:none"><div id="lblDesc_Incid@(dev.Id_Fol_GMD)">@dev.Desc_Incid</div></td>*@
+                                                        </tr>
+                                                    }
+
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"> </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row" id="gridFolios">
+                    <div class="col-sm-12">
+                        <div id="table-scroll">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td class="text small"><strong>Folio</strong><div style="font-weight:bold;" class="text-danger" id="lblFolio"></div></td>
+                                    <td class="text small"><strong>Cod Bar</strong><div style="font-weight:bold;" class="text-warning" id="lblCodBar"></div></td>
+                                    <td class="text small"><strong> Prov</strong><div id="lblCodProv"></div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text small"><strong>Descripcion</strong><div id="lblDesc"></div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text small"><strong>Falla</strong><div style="font-weight:bold;" class="text-success" id="lblFalla"></div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><div class="hr-line-dashed"></div></td>
+                                </tr>
+                                <tr style="padding-top:50px;">
+                                    <td class="text-center small" style="width:33%;">
+                                        <strong>Apto  Venta</strong><br />
+
+                                    </td>
+                                    <td class="text-center small" style="width:33%;">
+                                        <strong>Empaque Original</strong><br />
+
+                                    </td>
+                                    <td class="text-center small" style="width:33%;">
+                                        <strong>Requiere Descuento</strong><br />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center small">
+                                        <input id="chkBit_ReqDescto" name="chkBit_AptoVta" type="checkbox" class='all pull-center' />
+                                    </td>
+                                    <td class="text-center small">
+
+                                        <input id="chkBit_ReqDescto" name="chkBit_ReqDescto" type="checkbox" class='all pull-center' />
+                                    </td>
+                                    <td class="text-center small">
+
+                                        <input id="chkBit_ReqDescto" name="chkBit_ReqDescto" type="checkbox" class='all pull-center' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><div class="hr-line-dashed"></div></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="right">
+                                        <input type="button" class="btn btn-success btn-xs" onclick="onclick_GenerarSolucionar()" value="Generar Solución" id="btnGenerarSolucionar" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/plugins/flot")
+    @Scripts.Render("~/plugins/chartJs")
+    @Scripts.Render("~/plugins/peity")
+    @Scripts.Render("~/plugins/dataTables")
+    @Styles.Render("~/plugins/clockpickerStyles")
+    @Styles.Render("~/plugins/datapickerStyles")
+    @Scripts.Render("~/plugins/dataPicker")
+
+    <script>
+        function ToJavaScriptDate(value) { //To Parse Date from the Returned Parsed Date
+            debugger;
+            var fecha = "";
+            if (value != null) {
+                var pattern = /Date\(([^)]+)\)/;
+                var results = pattern.exec(value);
+                var dt = new Date(parseFloat(results[1]));
+                fecha = (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+            }
+
+            return fecha;
+        }
+
+        function onclick_Buscar() {
+
+            var FechaInicial = $("#txtFechaInicio").val();
+            var FechaFinal = $("#txtFechaFin").val();
+
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                datatype: 'html',
+                //async:false,
+                url: '@Url.Action("BusquedaSoluciones", "SalidaMercancia")',
+                data: {
+                    FechaInicial: FechaInicial
+                    , FechaFinal: FechaFinal
+                },
+                success: function (data) {
+                    if (data.Success == false) {
+                        $("#tblSoluciones tbody").empty()
+                        bootbox.alert(data.Message);
+                        return false;
+                    }
+                    else {
+                        if (data.length != 0) {
+
+                            $("#tblSoluciones tbody").empty()
+                            //new Date(parseInt('/Date(1224043200000)/'.substr(6)))
+                            $.each(data, function (index, row) {
+                                var nextRowID = row.Id_Fol_GMD
+                                $('#tblSoluciones').append('<tr id=\'rowLinea' + nextRowID + '\'>' +
+                              ' <td class="text-center small">' + row.Id_Fol_GMD + '</td>' +
+                              ' <td class="text-center small">' + ToJavaScriptDate(row.Fecx_Registro) + '</td>' +
+                              ' <td class="text-center small">' + row.Num_CodBarra + '</td>' +
+                              ' <td class="text-center small">' + row.ddDesc_Ensamb + '</td>' +
+
+                              ' <td class="text-center small">' + row.RazonSocial + '</td>' +
+                              ' <td class="text-center small">' + row.Desc_TipoSol + '</td>' +
+                              ' <td class="text-center small">' + row.FolioGen + '</td>' +
+                              ' <td class="text-center small">' + row.CodigoRemate + '</td>' +
+                              ' <td class="text-center small">' + ToJavaScriptDate(row.Fec_Reparada) + '</td>' +
+                              ' <td class="text-center small">' + ToJavaScriptDate(row.Fec_LimRepacion) + '</td>' +
+                              ' <td class="text-center small">' + row.Observaciones + '</td>' +
+                              ' <td class="text-center small">' + row.Id_Fol_GMDPadre + '</td>' +
+                               '</tr>');
+
+                            })
+
+                        }
+                        else {
+                            $("#tblSoluciones tbody").empty();
+                            bootbox.alert("No hay datos disponibles en la tabla");
+                        }
+                    }
+                }
+                      , error: function (jqXHR, textStatus, errorThrown) {
+                          bootbox.alert(errorThrown);
+                      }
+
+            });
+        }
+
+    </script>
+    <script type="text/javascript">
+        $('.input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true,
+            format: 'd/mm/yyyy'
+            //format: 'HH:mm'
+        });
+
+        $(document).ready(function () {
+
+
+        });
+    </script>
+
+}

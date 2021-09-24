@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRMerCadCap>
+@{
+    var grid = new WebGrid(Model, canPage: false, canSort: false);
+}
+
+@grid.GetHtml(
+                tableStyle: "table table-striped table-bordered table-hover dataTables-example gvv",
+                columns:
+
+                    grid.Columns(
+
+                        grid.Column("Depto", "Departamento"),
+                        grid.Column("jefeDpto", "Jefe Departamento"),
+                                grid.Column("Articulo", "Código"),
+                                grid.Column("Descripcion", "Descripción"),
+                                grid.Column("Lote", "Lote"),
+                                grid.Column("FechaCaducidad", "Fecha Caducidad"),
+                                grid.Column("CantTeorica", "Existencia Teorica"),
+                                grid.Column("CantMerma", "Cantidad Merma UV"),
+                                grid.Column("CantAjustar", "Cantidad Ajustar")
+                                )
+               )
+
+
+

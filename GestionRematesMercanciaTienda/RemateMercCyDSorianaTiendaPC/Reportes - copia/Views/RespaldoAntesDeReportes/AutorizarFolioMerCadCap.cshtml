@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "AutorizarFolioMerCadCap";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+@{
+
+    var Fecha = String.Format("{0:d/M/yyyy}", DateTime.Now);
+    if (ViewData["ddlSrcFolio"] ==null)
+    {
+        List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem> cat = new List<EDReciboTiendaSoriana.Captura.EDRConsultaListItem>();
+        EDReciboTiendaSoriana.Captura.EDRConsultaListItem item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item = new EDReciboTiendaSoriana.Captura.EDRConsultaListItem();
+        item.Descripcion = "Seleccione";
+        item.Id = -1;
+        cat.Add(item);
+        var dropdownVD = new SelectList(cat, "Id", "Descripcion");
+        ViewData["ddlSrcFolio"] = dropdownVD;
+    }
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a> Autorizar Folio Mercancia Caduca Capturada
+                    </h2>
+                    <div class="panel-body">
+                        <div class="input-group-btn ">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Fecha:</label>
+                                    <div class="input-group date" id="FechaFolioAutDate">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        @Html.TextBox("FechaFolioAut", null, new { @class = "form-control datepicker", @placeholder = "Fecha Caduca" })
+                                    </div>
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Fecha Folio</span>
+                                </div>
+                            </div>                            
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Jefe de Departamento: </label>
+                                    @Html.DropDownList("Id_Num_Dpto", (SelectList)ViewData["ddlSrcJefeDepto"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Jefe de Departanmento</span>
+                                </div>
+                            </div>                            
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Folio de captura:</label>
+                                    @Html.DropDownList("FolCap", (SelectList)ViewData["ddlSrcFolio"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Folio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-warning btn-buscarfolmciacadacepAut" type="button"><i class="fa fa-binoculars"></i>Buscar </button>
+                                    @*<button class="btn btn-warning btn-buscarfolmciacad" type="button" onclick="location.href='@Url.Action("ObtenerFolios", "Reportes")'"><i class="fa fa-binoculars"></i>Buscar -</button>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-success btnAutFolio" type="button">Autorizar </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-danger btnCancelarFolio" type="button">Cancelar </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-9">
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div id="divResults">
+                                @{Html.RenderPartial("~/Views/Shared/_PartialRptAutorizaMerCadCap.cshtml");}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        @section Styles {
+
+            @Styles.Render("~/plugins/dataPickerStyles")
+        }
+        @section Scripts {
+            @Scripts.Render("~/plugins/flot")
+            @Scripts.Render("~/plugins/chartJs")
+            @Scripts.Render("~/plugins/peity")
+            @Scripts.Render("~/plugins/dataTables")
+            @Scripts.Render("~/plugins/dataPicker")
+            @Scripts.Render("~/plugins/slimScroll")
+            @Scripts.Render("~/Scripts/AutFolio")
+        }
+
+        
+
+    </div>
+</div>
+
+<div class="modal fade" id="modalAcepFolio" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"> Autorizar Folio Mercancia Caduca Capturada</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divRenderAprobar">
+                    El Folio ha sido aceptado con Éxito
+                </div>
+            </div>
+            <input type="hidden" class="form-control" id="modTxtIdCatDel">
+            <div class="modal-footer">
+                <button id="" type="button" class="btn btn-default btnfolioaceptado" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCancelFolio" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"> Autorizar Folio Mercancia Caduca Capturada</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divRenderCancelar">
+                    El Folio ha sido cancelado con Éxito
+                </div>
+            </div>
+            <input type="hidden" class="form-control" id="modTxtIdCatDel">
+            <div class="modal-footer">
+                <button id="" type="button" class="btn btn-default btnfoliocancelado" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCancelarFolio" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"> Cancelar Folio</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divRenderCancelar">
+                    El Folio no tiene artiículos a Generar, desea cancelarlo
+                </div>
+            </div>
+            <input type="hidden" class="form-control" id="modTxtIdCatDel">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " data-dismiss="modal">No</button>
+                <button id="btnCanFolio" type="button" class="btn btn-default btnCanFolio" data-dismiss="modal">Si</button>
+            </div>
+        </div>
+    </div>
+</div>
+

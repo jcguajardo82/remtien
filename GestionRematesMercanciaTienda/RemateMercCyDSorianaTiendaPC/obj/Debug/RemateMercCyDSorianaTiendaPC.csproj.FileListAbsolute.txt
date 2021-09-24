@@ -1,0 +1,500 @@
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\EDSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\NGSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\EDSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\DTSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\NGSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\RemateMercCyDSorianaTienda\RemateMercCyDSorianaTiendaPC\bin\DTSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTSeguridadSoriana.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTSeguridadSoriana.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.dll
+C:\TFS\REMATE MERCANCIA CADUCA Y DAÑADA\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\cinetkit.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\FrameworkToolsDevelopment.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.pdb
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.pdb
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.pdb
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.cache
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.compiled
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\SORIANA_TFS\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\cinetkit.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\FrameworkToolsDevelopment.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.pdb
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.cache
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.compiled
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\Proyectos\Desarrollo\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\cinetkit.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\FrameworkToolsDevelopment.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.cache
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.compiled
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20190926\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ApplicationInsights.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\csc.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Collections.Immutable.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\vbc.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\roslyn\VBCSCompiler.exe.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll.config
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReciboTiendaPC.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\cinetkit.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\FrameworkToolsDevelopment.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.Common.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.SqlServer.Types.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Web.Infrastructure.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\ReportViewerForMvc.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Soriana.FWK.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\WebGrease.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\EDRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\NGRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Antlr3.Runtime.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Forloop.HtmlHelpers.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.DependencyCollector.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.Web.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.AI.WindowsServer.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ApplicationInsights.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\Newtonsoft.Json.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Helpers.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Mvc.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Optimization.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.Razor.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Deployment.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\System.Web.WebPages.Razor.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\DTRemateMercCyDSorianaTienda.pdb
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\bin\log4net.xml
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RemateMercCyDSorianaTiendaPC.csprojResolveAssemblyReference.cache
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.cache
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\RdlCompile.compiled
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.dll
+C:\Codigos_Allware_Soriana_Tienda\RemateTienda\PC\20191002\GestionRematesMercanciaTienda\RemateMercCyDSorianaTiendaPC\obj\Debug\ReciboTiendaPC.pdb

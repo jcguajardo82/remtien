@@ -1,0 +1,608 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body onload="funReady()">
+    <hr class="barra" />
+
+    <form id="formControlMarchamos" action="@Url.Action("ControlMarchamos", "RegistroSecos")" method="get">
+        
+        <div id="Principal" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    @*<tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>*@
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">12.-CONTROL MARCHAMOS</span></td></tr>
+                    <tr>
+                        <td> <span class="input-group-addon" id="sizing-addon3">CEDIS:</span> </td>
+                        <td><input type="text" id="input_CEDIS" name="input_CEDIS" onkeypress="input_CEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">FOL GUIA:</span></td>
+                        <td><input type="text" id="input_GUIA" name="input_GUIA" onkeypress="input_GUIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">VIENE DE:</span></td>
+                        <td><input type="text" id="input_VIENE" name="input_VIENE" onkeypress="input_VIENE_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="basic-addon1">Opción</span></td>
+                        <td><input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="ModalMarchamo" style="display:none">
+            <table>
+                <tr>
+                    <td> <span class="input-group-addon" id="sizing-addon3">NUMERO DE MARCHAMO:</span> </td>
+                    <td><input type="text" id="input_MARCHAMO" value="@TempData["CveMarchamo"]" name="input_MARCHAMO" onkeypress="input_MARCHAMO_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td> <span class="input-group-addon" id="sizing-addon3">ESTATUS:</span> </td>
+                    <td><input type="text" id="input_ESTATUS" value="@TempData["StatusMarchamo"]" name="input_ESTATUS" onkeypress="input_ESTATUS_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-OK    2.-VIOLADO</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">Opción</span></td>
+                    <td><input type="text" class="option" id="optionSelected2" name="optionSelected2" onkeypress="optionSelected2_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-OK GRABAR    2.-BORRAR    3.-SALIR</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label id="messageResult">@TempData["lblResult2"]</label></td>
+                </tr>
+            </table>
+        </div>
+        <div id="ModalConfirmacion" style="display:none">
+            <table>
+                <tr>
+                    <td colspan="2"> <span class="input-group-addon" id="sizing-addon3">CONFIRMACION DE MARCHAMOS RECIBIDOS</span> </td>
+                </tr>
+                <tr>
+                    <td> <span class="input-group-addon" id="sizing-addon3">LOS MARCHAMOS SE RECIBIERON OK?</span> </td>
+                    <td><input type="text" id="input_RECIBOMARCHAMO" name="input_RECIBOMARCHAMO" onkeypress="input_RECIBOMARCHAMO_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td>
+                </tr>
+                <tr>
+                    <td> <span class="input-group-addon" id="sizing-addon3">HUBO INCIDENCIA EN TIENDA ANTERIOR?</span> </td>
+                    <td><input type="text" id="input_INCIDENCIA" name="input_INCIDENCIA" onkeypress="input_INCIDENCIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td>
+                </tr>
+                <tr>
+                    <td> <span class="input-group-addon" id="sizing-addon3">DATOS OK?</span> </td>
+                    <td><input type="text" class="form-control" id="optionSelected3" name="optionSelected3" onkeypress="optionSelected3_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label id="messageResult">@TempData["lblResult3"]</label></td>
+                </tr>
+            </table>
+        </div>
+        <div id="ModalResumen" style="display:none">
+            <table>
+                <tr>
+                    @*<td> <span class="input-group-addon" id="sizing-addon3">RECIBIDOS:</span> </td>*@
+                    <td colspan="2"><label id="lbl_RECIBIDOS">@TempData["lbl_RECIBIDOS"]</label></td>
+                </tr>
+                <tr>
+                    @*<td> <span class="input-group-addon" id="sizing-addon3">OK:</span> </td>*@
+                    <td colspan="2"><label id="lbl_OK">@TempData["lbl_OK"]</label></td>
+                </tr>
+                <tr>
+                    @*<td> <span class="input-group-addon" id="sizing-addon3">VIOLADOS:</span> </td>*@
+                    <td colspan="2"><label id="lbl_VIOLADOS">@TempData["lbl_VIOLADOS"]</label></td>
+                </tr>
+                <tr>
+                    <td><label id="lbl_MARCHAMOSRESUMEN">@TempData["lbl_RESUMEN"]</label></td>
+                    <td><label id="lbl_MARCHAMOSRESUMEN">@TempData["lbl_MARCHAMOSRESUMEN"]</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" id="optionSelected4" name="optionSelected4" onkeypress="optionSelected4_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label id="messageResult">@TempData["lblResult4"]</label></td>
+                </tr>
+            </table>
+        </div>
+        <input id="flagMarchamo" value="@TempData["flagMarchamo"]" style="visibility:hidden" />
+        
+    </form>
+
+    <script>
+        //$(document).ready(function () {
+
+        //    if (document.getElementById("flagMarchamo").value == "Y") {
+        //        document.getElementById("input_MARCHAMO").focus();
+        //        //$("#optionSelected").val() == ""
+        //        var ele = document.getElementById("ModalMarchamo");
+        //        if (ele.style.display == "block") {
+        //            ele.style.display = "none";
+        //            document.getElementById("input_MARCHAMO").focus();
+        //        }
+        //        else {
+        //            ele.style.display = "block";
+
+        //        }
+        //        var ele = document.getElementById("Principal");
+        //        if (ele.style.display == "block") {
+        //            ele.style.display = "none";
+
+        //        }
+        //        else {
+        //            ele.style.display = "block";
+
+        //        }
+        //    }
+        //    else {
+
+        //    }
+
+        //    if (document.getElementById("flagConfirmacion").value == "Y") {
+        //        document.getElementById("optionSelected4").focus();
+
+        //        var ele = document.getElementById("ModalResumen");
+        //        if (ele.style.display == "block") {
+        //            ele.style.display = "none";
+
+        //        }
+        //        else {
+        //            ele.style.display = "block";
+
+        //            document.getElementById("ModalConfirmacion").style.display = "none";
+        //            document.getElementById("ModalMarchamo").style.display = "none";
+        //        }
+
+        //        //var ele = document.getElementById("ModalConfirmacion");
+        //        //if (ele.style.display == "block") {
+        //        //    ele.style.display = "none";
+
+        //        //}
+        //        //else {
+        //        //    ele.style.display = "block";
+
+        //        //}
+        //    }
+
+        //});
+
+        function funReady() {
+            var form = document.getElementById("flagMarchamo").value;
+            if (form != "") {
+                var ele = document.getElementById(form);
+                if (ele.style.display == "block") {
+                    ele.style.display = "none";
+                }
+                else {
+                    ele.style.display = "block";
+                }
+            }
+            else {
+                document.getElementById("input_CEDIS").focus();
+            }
+
+            switch (form) {
+                case "Principal":
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+                case "ModalMarchamo":
+                    document.getElementById("input_MARCHAMO").focus();
+                    break;
+                case "ModalConfirmacion":
+                    document.getElementById("input_RECIBOMARCHAMO").focus();
+                    break;
+                case "ModalResumen":
+                    document.getElementById("optionSelected4").focus();
+                    break;
+                default:
+                    //document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+
+                if (document.getElementById("input_MARCHAMO").value != "") {
+                    document.getElementById("input_ESTATUS").focus();
+                }
+
+        }
+
+        function optionSelected_onkeypress(e) {
+            //var valueOption = $("#optionSelected").val();
+            var valueOption = document.getElementById("optionSelected").value;
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    switch (valueOption) {
+                        case "1":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected").focus();
+                            break;
+                    } break;
+                    //esc
+                case 27:
+                    document.getElementById("input_VIENE").focus();
+                    break;
+            }
+        }
+
+        function optionSelected2_onkeypress(e) {
+            //var valueOption = $("#optionSelected2").val();
+            var valueOption = document.getElementById("optionSelected2").value;
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:                    
+                    //$('form').submit();
+                    switch (valueOption) {
+                        case "1":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        case "3":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_ESTATUS").focus();
+                    break;
+            }
+        }
+
+        function optionSelected3_onkeypress(e) {
+           // var valueOption = $("#optionSelected3").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("optionSelected3").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formControlMarchamos").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_INCIDENCIA").focus();
+                    break;
+            }
+        }
+
+        function optionSelected4_onkeypress(e) {
+            //var valueOption = $("#optionSelected4").val();
+            var valueOption = document.getElementById("optionSelected4").value;
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    switch (valueOption) {
+                        case "1":
+                            document.getElementById("formControlMarchamos").submit();
+                            // $('form').submit();
+
+                            break;
+                        case "2":
+                            var ele = document.getElementById("ModalResumen");
+                            if (ele.style.display == "block") {
+                                ele.style.display = "none";
+
+                            }
+                            else {
+                                ele.style.display = "block";
+                                
+
+                            }
+                            var ele = document.getElementById("ModalConfirmacion");
+                            if (ele.style.display == "block") {
+                                ele.style.display = "none";
+
+                            }
+                            else {
+                                ele.style.display = "block";
+                                document.getElementById("input_RECIBOMARCHAMO").focus();
+                            }
+                            break;
+                        default:
+                            document.getElementById("optionSelected4").focus();
+                            break;
+                    }
+                    
+                    //$('form').submit();
+
+                    break;
+                    //esc
+                case 27:
+                    var ele = document.getElementById("ModalResumen");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+
+                    }
+                    var ele = document.getElementById("ModalConfirmacion");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+                        document.getElementById("optionSelected3").focus();
+                    }
+                    break;
+            }
+        }
+
+        function input_CEDIS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_CEDIS").value != "") {
+                        document.getElementById("input_GUIA").focus();
+                    }
+                    else {
+                        document.getElementById("input_CEDIS").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    var link = document.createElement('a');
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    break;
+            }
+        }
+
+
+        function input_GUIA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_GUIA").value != "") {
+                        document.getElementById("input_VIENE").focus();
+                    }
+                    else {
+                        document.getElementById("input_GUIA").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+        }
+
+
+        function input_VIENE_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_VIENE").value != "") {
+                        document.getElementById("optionSelected").focus();
+                    }
+                    else {
+                        document.getElementById("input_VIENE").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+
+
+        function input_MARCHAMO_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_MARCHAMO").value != "") {
+                        document.getElementById("formControlMarchamos").submit();
+                    }
+                    else {
+                        document.getElementById("input_MARCHAMO").focus();
+                    }
+                    
+                    //$('form').submit();
+                    //document.getElementById("input_ESTATUS").focus();
+                    break;
+                    //esc
+                case 27:
+                    //document.getElementById("input_RECIBOMARCHAMO").focus();
+
+                    var ele = document.getElementById("ModalConfirmacion");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+                        document.getElementById("input_RECIBOMARCHAMO").focus();
+
+                    }
+                    var ele = document.getElementById("ModalMarchamo");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    //var frm = document.formModalMarchamo;
+                    //if (frm.style.display == "block") { frm.style.display = "none" }
+                    //else
+                    //    if (frm.style.display == "none") { frm.style.display = "block" }
+
+
+
+                    //var frm = document.formModalConfirmacion;
+                    //if (frm.style.display == "none") { frm.style.display = "block" }
+                    //else
+                    //    if (frm.style.display == "block") { frm.style.display = "none" }
+                    break;
+            }
+        }
+
+
+        function input_ESTATUS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("input_ESTATUS").value;
+                    switch(op){
+                        case "1":
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                        case "2":
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                        default:
+                            document.getElementById("input_ESTATUS").focus();
+                            break;
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_MARCHAMO").focus();
+
+                    break;
+            }
+        }
+
+
+        function input_RECIBOMARCHAMO_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("input_RECIBOMARCHAMO").value;
+                    switch(op){
+                        case "1":
+                            document.getElementById("input_INCIDENCIA").focus();
+                            break;
+                        case "2":
+                            document.getElementById("input_INCIDENCIA").focus();
+                            break;
+                        default:
+                            document.getElementById("input_RECIBOMARCHAMO").focus();
+                            break;
+                    }
+                    
+                    break;
+                    //esc
+                case 27:
+                   // document.getElementById("input_MARCHAMO").focus();
+
+                    var ele = document.getElementById("ModalMarchamo");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+                        document.getElementById("input_MARCHAMO").focus();
+                    }
+                    var ele = document.getElementById("ModalConfirmacion");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+            }
+        }
+
+
+
+        function input_INCIDENCIA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            switch (keyCode) {
+                //enter
+                case 13:
+                    var op = document.getElementById("input_INCIDENCIA").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                        case "2":
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                        default:
+                            document.getElementById("input_INCIDENCIA").focus();
+                            break;
+                    }
+                    
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_RECIBOMARCHAMO").focus();
+                    break;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

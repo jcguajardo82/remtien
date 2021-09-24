@@ -1,0 +1,165 @@
+﻿@model IEnumerable<EDReciboTiendaSoriana.EDReportes.EDRArtRemProxCaducarEtapa>
+@{
+    ViewBag.Title = "ArtProxCadEtapa";
+    Layout = "~/Shared/Views/_Layoutsinmenu.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>
+                        <a href="@Url.Action("Index", "Menu")" class="btn btn-default btn-circle btn-lg"><i class="fa fa-reply"></i></a>RT22 Remate de Artículos por Etapa
+                    </h2>
+                    <div class="panel-body">
+                        <div class="input-group-btn ">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Jefe de Departamento: </label>
+                                    @Html.DropDownList("Id_Num_DptoProxCadEtapa", (SelectList)ViewData["ddlSrcJefePrcoCadEtapa"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir el Jefe de Departanmento</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Categoría: </label>
+                                   @Html.DropDownList("Id_Categoria", (SelectList)ViewData["ddlSrcCatRemProxCadEtapa"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir Categoría</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Tipo de Vencimiento: </label>
+                                    @Html.DropDownList("Id_TipoVencimiento", (SelectList)ViewData["ddlSrcArtRemProxCadEtapa"], new { @class = "form-control" })
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir Tipo de Vencimiento</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Fecha: </label>
+                                    <div class="input-group date" id="FechaArtProxCadEtapaDate">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        @Html.TextBox("FechaArtProxCadEtapa", null, new { @class = "form-control datepicker", @placeholder = "Fecha Caduca" })
+                                    </div>
+                                    <span class="label-danger error" style="visibility:collapse">Falta definir la Fecha Folio</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <button class="btn btn-warning btn-artproxcadetapa" type="button"><i class="fa fa-binoculars"></i>Buscar </button>                                  
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row" id="Reporte" hidden="hidden">
+                            <div class="col-lg-9">
+                            </div>
+                            <div class="col-lg-1">
+                            </div>
+                            <div class="col-lg-1">
+                                <button class="btn navy-bg " id="btnReporte" type="button" onclick="javascript: ObtenerReporte()">Reporte </button>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div id="divResults">
+                                @{Html.RenderPartial("~/Views/Shared/_PartialRptArProxCadEtapa.cshtml", Model);}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalGrid" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                        <div class="modal-body" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="modalTitle"> Consulta Reporte Artículos Próximos a Caducar por Etapa</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="panel panel-default" id="datosReporte" hidden="hidden" style="padding-left: 20px;padding-right: 20px;">
+                                        <div>
+                                            <iframe width="100%" id="frameReporte" src="" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Styles {
+
+        @Styles.Render("~/plugins/dataPickerStyles")
+    }
+    @section Scripts {
+        @Scripts.Render("~/plugins/flot")
+        @Scripts.Render("~/plugins/chartJs")
+        @Scripts.Render("~/plugins/peity")
+        @Scripts.Render("~/plugins/dataTables")
+        @Scripts.Render("~/plugins/dataPicker")
+        @Scripts.Render("~/plugins/slimScroll")
+        @Scripts.Render("~/Scripts/RepArtProxCadEtapa")
+
+    <script>
+                function ObtenerReporte() {
+                    debugger;
+                    var Jefe = $("#Id_Num_DptoProxCadEtapa").val();
+                    var nombre_Jefe = $("#Id_Num_DptoProxCadEtapa option:selected").text();
+                    var categoria = $("#Id_Categoria").val();
+                    var nombre_Categoria = $("#Id_Categoria option:selected").text();
+                    var tipovencimiento = $("#Id_TipoVencimiento").val();
+                    var nombre_Vencimiento = $("#Id_TipoVencimiento option:selected").text();
+                    var fecha = $("#FechaArtProxCadEtapa").val();
+                    var Usuario = '@Session["sNombre"].ToString()';
+
+                    $.ajax({
+                        url: '@Url.Action("ImprimeReporteArtProxCadEtapa", "Reportes")',
+                        type: "GET",
+                        dataType: "JSON",
+                        data: {
+                            "Fecha": fecha,
+                            "Jefe": Jefe,
+                            "categoria": categoria,
+                            "tipovencimiento": tipovencimiento,
+                            "nombre_Categoria": nombre_Categoria,
+                            "nombre_Vencimiento": nombre_Vencimiento,
+                            "nombre_Jefe": nombre_Jefe,
+                            "Usuario": Usuario
+                        },
+                        success: function (data) {
+                            if (data.Success == true) {
+                                $("#datosGridDetalle").show();
+                                $("#datosReporte").show();
+                                $("#modalGrid").modal();
+                                debugger;
+
+                                var url = data.Message;
+                                var url2 = '@Url.Content("~/").ToString()' + url;
+                                //   bootbox.alert(url2);
+                                var heigth = $(document).height() * 1.1;
+
+                                $('#frameReporte').prop('src', url2)
+                                $('#frameReporte').prop('height', heigth)
+                            }
+                            else {
+                                bootbox.alert(data.Message);
+                            }
+                        }
+                    });
+                }
+    </script>
+    }
+
+</div>

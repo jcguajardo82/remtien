@@ -1,0 +1,219 @@
+﻿
+@{
+    Layout = "~/Shared/Views/_LayoutLightMenu.cshtml";
+}
+
+<!DOCTYPE html>
+<style type="text/css">
+    /* The ruleset below (empty or otherwise) is required for the bug! */
+    /*.holder b {
+    }
+
+    .holder ~ span b {
+        background: red;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one a {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one input {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one span {
+        font-size: 12px;
+        font-family: Consolas;
+    }
+
+    .parent-style-one dt {
+        font-size: 12px;
+        font-family: Consolas;
+    }*/
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio_1_1</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="parent-style-one">
+        @*<div class="row">
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Opcion</span>
+                    <input type="text" class="form-control" id="optionSelected" name="optionSelected" value="1" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeydown(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>*@
+
+
+        <dl>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("11.-ARRIBO TPTA", "ArriboTransportista", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("12.-CONTROL MARCHAMOS", "ControlMarchamos", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("13.-CONFIRMA TARIMA", "ConfirmaTarima", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("14.-REG MCIA INCIDENC", "RegistroMercanciaIncidencia", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("15.-SALIDA TPTA.", "SalidaTransportista", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("16.-CERRAR EMBARQUE", "CerrarEmbarque", "RegistroSecos")</b></span>
+                    </span>
+                </i>
+            </dt>
+            <dt>
+                <i>
+                    <!-- HTML COMMENT OR ANY ELEMENT -->
+                    <span>
+                        <span><b>@Html.ActionLink("17.-AUDITORIA GUIA", "Inicio_1_7", "Menu")</b></span>
+                    </span>
+                </i>
+            </dt>
+        </dl>
+
+    </div>
+    @*@Scripts.Render("~/bundles/jquery")*@
+</body>
+</html>
+
+<script>
+
+    function optionSelected_onkeydown(e) {
+        //var valueOption = $("#optionSelected").val();
+        var valueOption = document.getElementById("menuOption").value;
+        var keyCode = e.keyCode ? e.keyCode : e.which;
+
+
+        switch (keyCode) {
+
+            //atras
+            case 37:
+                break;
+                //adelante
+            case 39:
+                switch (valueOption) {
+                    case "1":
+                        var url = '@Url.Action("Inicio", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "11":
+                        var url = '@Url.Action("ArriboTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "12":
+                        var url = '@Url.Action("ControlMarchamos", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "13":
+                        var url = '@Url.Action("ConfirmaTarima", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "14":
+                        var url = '@Url.Action("RegistroMercanciaIncidencia", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "15":
+                        var url = '@Url.Action("SalidaTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "16":
+                        var url = '@Url.Action("CerrarEmbarque", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "17":
+                        var url = '@Url.Action("Inicio_1_7", "Menu")';
+                        window.location.href = url;
+                        break;
+
+                }
+                break;
+                //enter
+            case 13:
+                switch (valueOption) {
+                    case "1":
+                        var url = '@Url.Action("Inicio", "Menu")';
+                        window.location.href = url;
+                        break;
+                    case "11":
+                        var url = '@Url.Action("ArriboTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "12":
+                        var url = '@Url.Action("ControlMarchamos", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "13":
+                        var url = '@Url.Action("ConfirmaTarima", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "14":
+                        var url = '@Url.Action("RegistroMercanciaIncidencia", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "15":
+                        var url = '@Url.Action("SalidaTransportista", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "16":
+                        var url = '@Url.Action("CerrarEmbarque", "RegistroSecos")';
+                        window.location.href = url;
+                        break;
+                    case "17":
+                        var url = '@Url.Action("Inicio_1_7", "Menu")';
+                        window.location.href = url;
+                        break;
+                }
+                break;
+                //esc
+            case 27:
+                break;
+        }
+    }
+
+</script>

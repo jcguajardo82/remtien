@@ -1,0 +1,483 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body onload="funReady()">
+    <hr class="barra"/>
+    <form id="formRegistroMercanciaIncidencia" action="@Url.Action("RegistroMercanciaIncidencia", "RegistroSecos")" method="get">
+        <div id="Principal" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    @*
+                        <tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>*@
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">14.-REG MCIA INCIDENC</span></td></tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CEDIS</span></td>
+                        <td><input type="text" value="@TempData["input_CEDIS"]" id="input_CEDIS" name="input_CEDIS" onkeypress="input_CEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><label id="lbl_DESCEDIS">@TempData["lbl_DESCEDIS"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">GUIA</span></td>
+                        <td><input type="text" id="input_GUIA" name="input_GUIA" onkeypress="input_GUIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected" name="optionSelected" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult">@TempData["lblResult"]</label></td></tr>
+                </table>
+            </div>
+            @*<dl>
+                    <dt><span class="input-group-addon" id="basic-addon1">Opcion</span></dt>
+                    <dt><input type="text" class="form-control" id="menuOption" name="menuOption" value="1" onkeydown="menuOption_onkeydown(event)" onkeypress="menuOption_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></dt>
+                    <dt>14.-REG MCIA INCIDENC</dt>
+                    <dt><span class="input-group-addon" id="sizing-addon3">CEDIS</span></dt>
+                    <dt><input type="text" id="input_CEDIS" name="input_CEDIS" onkeydown="input_CEDIS_onkeydown(event)" onkeypress="input_CEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></dt>
+                    <dt><input type="text" id="input_CEDIS" name="input_CEDIS" onkeydown="input_CEDIS_onkeydown(event)" onkeypress="input_CEDIS_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></dt>
+                    <dt><span class="input-group-addon" id="sizing-addon3">GUIA</span></dt>
+                    <dt><input type="text" id="input_GUIA" name="input_GUIA" onkeydown="input_GUIA_onkeydown(event)" onkeypress="input_GUIA_onkeypress(event)" class="form-control" placeholder="1293892" aria-describedby="sizing-addon3"></dt>
+                    <dt>DATOS OK?</dt>
+                    <dt><span class="input-group-addon" id="basic-addon1">Opcion</span></dt>
+                    <dt><input type="text" class="form-control" id="optionSelected" name="optionSelected" value="1" onkeydown="optionSelected_onkeydown(event)" onkeypress="optionSelected_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></dt>
+                    <dt>1.-SI    2.-NO</dt>
+                    <dt><label id="messageResult"></label></dt>
+
+                </dl>*@
+        </div>
+
+
+        <div id="IngresaCodigos" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CODIGO:</span></td>
+                        <td><input type="text" id="input_CODIGO" value="@TempData["input_CODIGO"]" name="input_CODIGO" onkeypress="input_CODIGO_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label id="lbl_DESCART">@TempData["lbl_DESCART"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">ACUM:</span></td>
+                        <td><label id="lbl_ACUM">@TempData["lbl_ACUM"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">UVTA:</span></td>
+                        <td><label id="lbl_UVTA">@TempData["lbl_UVTA"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">UCOM:</span></td>
+                        <td><label id="lbl_UCOM">@TempData["lbl_UCOM"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">CAP EMP:</span></td>
+                        <td><label id="lbl_CAPEMP">@TempData["lbl_CAPEMP"]</label></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="sizing-addon3">DANADA-UV:</span></td>
+                        <td><input type="text" id="input_DANADA" name="input_DANADA" onkeypress="input_DANADA_onkeypress(event)" class="form-control" placeholder="12344553" aria-describedby="sizing-addon3"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="basic-addon1">EDO.BULTO:</span></td>
+                        <td>
+                            @{
+                                <select id="cmb_ESTADOBULTO" name="cmb_ESTADOBULTO" onkeypress="cmb_ESTADOBULTOKeypress(event)">
+                                    @if (TempData["cmb_ESTADOBULTO"] != null)
+                                    {
+                                        foreach (System.Collections.DictionaryEntry elemento in (System.Collections.Hashtable)TempData["cmb_ESTADOBULTO"])
+                                        {
+                                            <option value="@elemento.Key">@elemento.Value</option>
+                                        }
+                                    }
+                                </select>
+                            }
+                            @*<select id="cmb_ESTADO">
+                            <option value="1">OK</option>
+                            <option value="2">VIOLADA</option>
+                            <option value="3">DAÑADA</option>
+                        </select>*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="input-group-addon" id="basic-addon1">MOTIVO:</span></td>
+                        <td>
+                            @{
+                                <select id="cmb_MOTIVO" name="cmb_MOTIVO" onkeypress="cmb_MOTIVOKeypress(event)">
+                                    @if (TempData["cmb_MOTIVO"] != null)
+                                    {
+                                        foreach (System.Collections.DictionaryEntry elemento in (System.Collections.Hashtable)TempData["cmb_MOTIVO"])
+                                        {
+                                            <option value="@elemento.Key">@elemento.Value</option>
+                                        }
+                                    }
+                                </select>
+                            }
+                            @*<select id="cmb_MOTIVO">
+                            <option value="1">Danada por Traslado</option>
+                            <option value="2">Faltante x Traslado</option>
+                            <option value="3">Caduca Recibo Confianza</option>
+                        </select>*@
+                        </td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opción</span></td><td><input type="text" class="form-control" id="optionSelected2" name="optionSelected2" onkeypress="optionSelected2_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-AGREGAR  2.-BORRAR  3.-SALIR</span></td></tr>
+                    <tr><td colspan="2"><label id="messageResult2">@TempData["lblResult2"]</label></td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="Confirma" style="display:none">
+            <div class="parent-style-one">
+                <table>
+                    <tr>
+                        <td colspan="2"><label>¿YA DECLARO TODO LO DAÑADO?</label></td>
+                    </tr>
+                    <tr><td><span class="input-group-addon" id="basic-addon1">Opcion</span></td><td><input type="text" class="form-control" id="optionSelected3" name="optionSelected3" onkeypress="optionSelected3_onkeypress(event)" placeholder="Selecciona una opcion" aria-describedby="basic-addon1"></td></tr>
+                    <tr><td colspan="2"><span class="input-group-addon" id="basic-addon1">1.-SI    2.-NO</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <input id="flagCodigo" value="@TempData["flagCodigo"]" style="visibility:hidden" />
+      
+    </form>
+    @*@Scripts.Render("~/bundles/jquery")*@
+
+    
+    <script>
+        //$(document).ready(function () {
+        //    //if (document.getElementById("Principal").style.display == "block") {
+        //    //    document.getElementById("input_CEDIS").focus();
+        //    //}
+        //    //if (document.getElementById("IngresaCodigos").style.display == "block") {
+        //    //    document.getElementById("input_CODIGO").focus();
+        //    //}
+        //    //if (document.getElementById("Confirma").style.display == "block") {
+        //    //    document.getElementById("optionSelected3").focus();
+        //    //}
+        //    if (document.getElementById("flagCodigo").value == "Y") {
+
+        //        var ele = document.getElementById("IngresaCodigos");
+        //        if (ele.style.display == "block") {
+        //            ele.style.display = "none";
+        //            document.getElementById("input_CODIGO").focus();
+        //        }
+        //        else {
+        //            ele.style.display = "block";
+        //        }
+
+        //        var ele = document.getElementById("Principal");
+        //        if (ele.style.display == "block") {
+        //            ele.style.display = "none";
+        //        }
+        //        else {
+        //            ele.style.display = "block";
+
+        //        }
+
+        //        document.getElementById("input_CEDIS").focus();
+        //    }
+        //    else {
+
+        //    }
+
+
+        //    if (document.getElementById("flagTermina").value == "Y") {
+
+        //        document.getElementById("IngresaCodigos").style.display = "none";
+        //        document.getElementById("Confirma").style.display = "none";
+        //        document.getElementById("Principal").style.display = "block";
+        //        document.getElementById("input_CEDIS").focus();
+        //    }
+
+        //});
+
+        function funReady() {
+
+            var form = document.getElementById("flagCodigo").value;
+            if (form != "") {
+                var ele = document.getElementById(form);
+                if (ele.style.display == "block") {
+                    ele.style.display = "none";
+                }
+                else {
+                    ele.style.display = "block";
+                }
+            }
+
+            switch (form) {
+                case "Principal":
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+                case "IngresaCodigos":
+                    document.getElementById("input_CODIGO").focus();
+                    break;
+                case "Confirma":
+                    document.getElementById("optionSelected3").focus();
+                    break;
+
+                default:
+                    //document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+
+            if (document.getElementById("input_CEDIS").value != "") {
+                document.getElementById("input_GUIA").focus();
+            }
+            if (document.getElementById("input_CODIGO").value != "") {
+                document.getElementById("input_DANADA").focus();
+            }
+        }
+
+        function input_CEDIS_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_CEDIS").value != "") {
+                        document.getElementById("formRegistroMercanciaIncidencia").submit();
+                    }
+                    else {
+                        document.getElementById("input_CEDIS").focus();
+                    }
+                   // $('form').submit();
+                    break;
+                    //esc
+                case 27:
+                   var link = document.createElement('a');
+                    var url = '@Url.Action("Inicio", "Menu")';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    break;
+            }
+        }
+
+        function input_GUIA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    if (document.getElementById("input_GUIA").value != "") {
+                        document.getElementById("optionSelected").focus();
+                    }
+                    else {
+                        document.getElementById("input_GUIA").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_CEDIS").focus();
+                    break;
+            }
+        }
+
+        function input_DANADA_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    debugger;
+                    if (document.getElementById("input_DANADA").value != "") {
+                        if (parseInt(document.getElementById("input_DANADA").value) <= 0) {
+                            document.getElementById("input_DANADA").focus();
+                        }
+                        else {
+                            document.getElementById("cmb_ESTADOBULTO").focus();
+                        }
+                        
+                    }
+                    else {
+                        document.getElementById("input_DANADA").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_CODIGO").focus();
+                    break;
+            }
+        }
+
+        function cmb_ESTADOBULTOKeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    document.getElementById("cmb_MOTIVO").focus();
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("cmb_ESTADOBULTO").focus();
+                    break;
+            }
+        }
+        function cmb_MOTIVOKeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    document.getElementById("optionSelected2").focus();
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("cmb_ESTADOBULTO").focus();
+                    break;
+            }
+        }
+
+        function optionSelected_onkeypress(e) {
+            //var valueOption = $("#optionSelected").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    //      $('form').submit();
+                    var op = document.getElementById("optionSelected").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected").focus();
+                            break;
+                    }
+
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("input_GUIA").focus();
+                    break;
+            }
+        }
+
+        function input_CODIGO_onkeypress(e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            switch (keyCode) {
+                //enter
+                case 13:
+                    // $('form').submit();
+                    if (document.getElementById("formRegistroMercanciaIncidencia").value != "") {
+                        document.getElementById("formRegistroMercanciaIncidencia").submit();
+                    }
+                    else {
+                        document.getElementById("input_CODIGO").focus();
+                    }
+                    break;
+                    //esc
+                case 27:
+
+                    var ele = document.getElementById("Confirma");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+                        document.getElementById("optionSelected3").focus();
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    var ele = document.getElementById("IngresaCodigos");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+            }
+        }
+
+
+        function optionSelected2_onkeypress(e) {
+            //var valueOption = $("#optionSelected2").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    // $('form').submit();
+                    var op = document.getElementById("optionSelected2").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        case "3":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected2").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    document.getElementById("cmb_MOTIVO").focus();
+                    break;
+            }
+        }
+
+
+        function optionSelected3_onkeypress(e) {
+            //var valueOption = $("#optionSelected3").val();
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+
+            //alert(keyCode);
+            switch (keyCode) {
+                //enter
+                case 13:
+                    // $('form').submit();
+                    var op = document.getElementById("optionSelected3").value;
+                    switch (op) {
+                        case "1":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        case "2":
+                            document.getElementById("formRegistroMercanciaIncidencia").submit();
+                            break;
+                        default:
+                            document.getElementById("optionSelected3").focus();
+                            break;
+                    }
+
+                    break;
+                    //esc
+                case 27:
+                    //document.getElementById("input_GUIA").focus();
+
+                    var ele = document.getElementById("Confirma");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    var ele = document.getElementById("IngresaCodigos");
+                    if (ele.style.display == "block") {
+                        ele.style.display = "none";
+                        document.getElementById("input_CODIGO").focus();
+                    }
+                    else {
+                        ele.style.display = "block";
+
+                    }
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>
